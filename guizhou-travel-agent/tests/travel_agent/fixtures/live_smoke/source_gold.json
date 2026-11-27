@@ -1,0 +1,207 @@
+{
+  "dataset_version": "m12-source-candidates-v1",
+  "label_version": "awaiting-authoritative-original-review",
+  "required_gold_count": 20,
+  "cases": [
+    {
+      "subject": "jiaxiulou",
+      "claim": "opening",
+      "target_date": "2025-08-07",
+      "direction": null,
+      "case_id": "S01",
+      "eligibility": "candidate",
+      "original_url": null,
+      "expected_value": null
+    },
+    {
+      "subject": "jiaxiulou",
+      "claim": "opening",
+      "target_date": "2025-08-15",
+      "direction": null,
+      "case_id": "S02",
+      "eligibility": "candidate",
+      "original_url": null,
+      "expected_value": null
+    },
+    {
+      "subject": "jiaxiulou",
+      "claim": "opening",
+      "target_date": "2025-08-24",
+      "direction": null,
+      "case_id": "S03",
+      "eligibility": "candidate",
+      "original_url": null,
+      "expected_value": null
+    },
+    {
+      "subject": "jiaxiulou",
+      "claim": "opening",
+      "target_date": "2025-09-01",
+      "direction": null,
+      "case_id": "S04",
+      "eligibility": "candidate",
+      "original_url": null,
+      "expected_value": null
+    },
+    {
+      "subject": "jiaxiulou",
+      "claim": "opening",
+      "target_date": "2026-11-28",
+      "direction": null,
+      "case_id": "S05",
+      "eligibility": "candidate",
+      "original_url": null,
+      "expected_value": null
+    },
+    {
+      "subject": "fanjingshan",
+      "claim": "booking",
+      "target_date": "2026-11-28",
+      "direction": null,
+      "case_id": "S06",
+      "eligibility": "candidate",
+      "original_url": null,
+      "expected_value": null
+    },
+    {
+      "subject": "fanjingshan",
+      "claim": "booking",
+      "target_date": "2026-11-29",
+      "direction": null,
+      "case_id": "S07",
+      "eligibility": "candidate",
+      "original_url": null,
+      "expected_value": null
+    },
+    {
+      "subject": "fanjingshan",
+      "claim": "booking",
+      "target_date": "2026-12-01",
+      "direction": null,
+      "case_id": "S08",
+      "eligibility": "candidate",
+      "original_url": null,
+      "expected_value": null
+    },
+    {
+      "subject": "fanjingshan",
+      "claim": "opening",
+      "target_date": "2026-11-28",
+      "direction": null,
+      "case_id": "S09",
+      "eligibility": "candidate",
+      "original_url": null,
+      "expected_value": null
+    },
+    {
+      "subject": "fanjingshan",
+      "claim": "opening",
+      "target_date": "2026-11-29",
+      "direction": null,
+      "case_id": "S10",
+      "eligibility": "candidate",
+      "original_url": null,
+      "expected_value": null
+    },
+    {
+      "subject": "guiyang-metro-l1",
+      "claim": "last_service",
+      "target_date": "2026-11-28",
+      "direction": "towards-xiaomeng",
+      "case_id": "S11",
+      "eligibility": "candidate",
+      "original_url": null,
+      "expected_value": null
+    },
+    {
+      "subject": "guiyang-metro-l1",
+      "claim": "last_service",
+      "target_date": "2026-11-28",
+      "direction": "towards-douguan",
+      "case_id": "S12",
+      "eligibility": "candidate",
+      "original_url": null,
+      "expected_value": null
+    },
+    {
+      "subject": "guiyang-metro-l1",
+      "claim": "last_service",
+      "target_date": "2026-11-29",
+      "direction": "towards-xiaomeng",
+      "case_id": "S13",
+      "eligibility": "candidate",
+      "original_url": null,
+      "expected_value": null
+    },
+    {
+      "subject": "guiyang-metro-l1",
+      "claim": "last_service",
+      "target_date": "2026-11-29",
+      "direction": "towards-douguan",
+      "case_id": "S14",
+      "eligibility": "candidate",
+      "original_url": null,
+      "expected_value": null
+    },
+    {
+      "subject": "guiyang-metro-l1",
+      "claim": "last_service",
+      "target_date": "2026-11-30",
+      "direction": "towards-xiaomeng",
+      "case_id": "S15",
+      "eligibility": "candidate",
+      "original_url": null,
+      "expected_value": null
+    },
+    {
+      "subject": "guiyang-metro-l1",
+      "claim": "last_service",
+      "target_date": "2026-11-30",
+      "direction": "towards-douguan",
+      "case_id": "S16",
+      "eligibility": "candidate",
+      "original_url": null,
+      "expected_value": null
+    },
+    {
+      "subject": "huangguoshu",
+      "claim": "ticket_price",
+      "target_date": "2026-11-28",
+      "direction": null,
+      "case_id": "S17",
+      "eligibility": "candidate",
+      "original_url": null,
+      "expected_value": null
+    },
+    {
+      "subject": "huangguoshu",
+      "claim": "ticket_price",
+      "target_date": "2026-11-29",
+      "direction": null,
+      "case_id": "S18",
+      "eligibility": "candidate",
+      "original_url": null,
+      "expected_value": null
+    },
+    {
+      "subject": "huangguoshu",
+      "claim": "ticket_price",
+      "target_date": "2026-12-01",
+      "direction": null,
+      "case_id": "S19",
+      "eligibility": "candidate",
+      "original_url": null,
+      "expected_value": null
+    },
+    {
+      "subject": "huangguoshu",
+      "claim": "ticket_price",
+      "target_date": "2026-12-02",
+      "direction": null,
+      "case_id": "S20",
+      "eligibility": "candidate",
+      "original_url": null,
+      "expected_value": null
+    }
+  ]
+}

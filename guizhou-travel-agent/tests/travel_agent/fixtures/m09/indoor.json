@@ -1,0 +1,46 @@
+{
+  "data_mode": "fixture",
+  "clock": "2026-11-26T10:00:00+08:00",
+  "scope": "2026-11-29",
+  "instruction": "第二天改成室内，返程票不变",
+  "operations": [
+    {
+      "op": "replace",
+      "date": "2026-11-29",
+      "stop_id": "d2-park",
+      "new_stop_id": "d2-indoor",
+      "point_id": "indoor-entry",
+      "arrive": "13:10",
+      "leave": "14:45",
+      "ticket_fen": 3750
+    }
+  ],
+  "points": [
+    {
+      "id": "indoor-entry",
+      "poi_id": "indoor-gallery",
+      "label": "室内展馆（模拟）",
+      "latitude": 26.635,
+      "longitude": 106.649
+    }
+  ],
+  "routes": [
+    {
+      "from_id": "museum-entry",
+      "to_id": "indoor-entry",
+      "mode": "car",
+      "distance_m": 4000,
+      "duration_s": 1080
+    },
+    {
+      "from_id": "indoor-entry",
+      "to_id": "guiyang-north-entry",
+      "mode": "car",
+      "distance_m": 6800,
+      "duration_s": 1320
+    }
+  ],
+  "unknown_cost_ids": [
+    "d2-ride"
+  ]
+}

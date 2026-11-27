@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>贵州旅行 · Skill 实测</title>
+<link rel="stylesheet" href="/result.css">
+<script defer src="/result.js"></script>
+<script defer src="/live.js"></script>
+</head>
+<body><main class="chat">
+<header><h1>贵州旅行 · Skill 实测</h1>
+<p>预设用来触发指定 Skill，后端实时查供应商。打车先选候车区，选择后仅询价。</p></header>
+<h2>选择一个真实查询</h2>
+<nav id="chat-prompts"></nav>
+<form id="chat-form"><input id="message" maxlength="600" placeholder="用自己的话问 Agent" aria-label="聊天消息" required><button id="send" disabled>发送</button></form>
+<p id="availability"></p>
+<p id="status" role="status"></p>
+<section id="result" aria-live="polite"></section>
+<details><summary>查看 Skill 和工具调用</summary><ul id="trace"></ul></details>
+</main></body></html>
+

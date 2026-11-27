@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>贵州旅行工作台</title>
+<link rel="stylesheet" href="/result.css"><link rel="stylesheet" href="/workbench.css">
+<script defer src="/result.js"></script><script defer src="/workbench.js"></script>
+</head><body><main class="workbench">
+<header class="mast"><h1>贵州旅行工作台</h1><p id="mode-note"></p></header>
+<div class="columns"><section aria-label="行程">
+<form id="plan-form" class="result" aria-label="规划贵阳两天">
+<h2>规划贵阳两天</h2>
+<div class="form-grid">
+<label>出发日期<input id="plan-start" type="date" required></label>
+<label>两人全团预算（元）<input id="plan-budget" type="number" min="1" step="1" required></label>
+<label>第二天返程时间<input id="plan-return" type="time" required value="18:30"></label>
+</div>
+<label class="inline-check"><input id="plan-lock" type="checkbox" required>锁定贵阳北站返程时间</label>
+<div class="workbench-actions"><button id="plan-submit" class="primary" type="submit">生成演示时间轴</button><button id="open-sample" type="button">打开演示行程</button></div>
+</form>
+<p id="status" role="status" aria-live="polite"></p>
+<section id="trip-panel" aria-label="当前行程"></section>
+<div class="workbench-actions" id="trip-actions" hidden>
+<button id="reopen-trip">重新打开</button><button id="refresh-trip">立即复查</button>
+<button id="export-html">导出 HTML</button><button id="export-pdf">导出 PDF</button></div>
+<section id="workbench-recheck" aria-live="polite"></section>
+<section id="export-panel" aria-live="polite"></section>
+</section>
+<section class="chat workbench-chat" aria-label="旅行助手">
+<h2>旅行助手</h2><nav id="chat-prompts" aria-label="提问示例"></nav>
+<form id="chat-form"><label for="chat-input" class="visually-hidden">输入旅行问题</label><input id="chat-input" maxlength="600" placeholder="输入问题" required><button id="send" type="submit">发送</button></form>
+<section id="chat-log" role="log" aria-label="聊天记录" aria-live="polite"></section>
+<details><summary>查看本次 Skill 和工具调用</summary><ul id="workbench-trace"></ul></details>
+</section></div></main></body></html>

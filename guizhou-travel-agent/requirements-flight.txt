@@ -1,0 +1,2 @@
+flights-mcp @ git+https://github.com/ricardo-perello/flights-mcp.git@d96ef277d7473929f629526963e3867c003b6a8f
+tzdata; sys_platform == "win32"

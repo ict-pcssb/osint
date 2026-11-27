@@ -1,0 +1,641 @@
+{
+  "ack": {
+    "schema_version": "1.0",
+    "trace_id": "m02-fixture-ack",
+    "generated_at": "2026-11-26T10:00:00+08:00",
+    "timezone": "Asia/Shanghai",
+    "run_status": "completed",
+    "persistence": "none",
+    "result": {
+      "kind": "ack",
+      "text": "收到，你计划11月28日去青岩。"
+    },
+    "evidence": []
+  },
+  "weather": {
+    "schema_version": "1.0",
+    "trace_id": "m02-fixture-weather",
+    "generated_at": "2026-11-26T10:00:00+08:00",
+    "timezone": "Asia/Shanghai",
+    "run_status": "completed",
+    "persistence": "none",
+    "result": {
+      "kind": "weather",
+      "data_mode": "fixture",
+      "place": {
+        "poi_id": "qingyan",
+        "label": "青岩古镇",
+        "coverage": "花溪区预报"
+      },
+      "target_date": "2026-11-27",
+      "checked_at": "2026-11-26T10:00:00+08:00",
+      "updated_at": "2026-11-26T09:00:00+08:00",
+      "forecast": {
+        "rain_probability_pct": 70,
+        "temperature_c": [
+          8,
+          15
+        ]
+      },
+      "conclusion": "演示预报有雨，户外体验可能受影响。",
+      "action": "若仍前往，优先安排雨势较小的时段。",
+      "evidence_ids": [
+        "fx-weather-01"
+      ]
+    },
+    "evidence": [
+      {
+        "evidence_id": "fx-weather-01",
+        "source_url": "fixture://fx-weather-01",
+        "publisher": "测试夹具",
+        "source_group_id": "fx-weather-01",
+        "collected_at": "2026-11-26T10:00:00+08:00",
+        "applies_to": [
+          "2026-11-27"
+        ],
+        "source_kind": "fixture",
+        "data_mode": "fixture",
+        "excerpt": "仅用于说明结构，不是实际运营、天气或价格依据。"
+      }
+    ]
+  },
+  "verification": {
+    "schema_version": "1.0",
+    "trace_id": "m02-fixture-verification",
+    "generated_at": "2026-11-26T10:00:00+08:00",
+    "timezone": "Asia/Shanghai",
+    "run_status": "completed",
+    "persistence": "none",
+    "result": {
+      "kind": "verification",
+      "data_mode": "fixture",
+      "subject_id": "huangguoshu-water-curtain",
+      "claim": "水帘洞在目标日开放并可预约",
+      "target_date": "2026-11-28",
+      "status": "unconfirmed",
+      "checked_at": "2026-11-26T10:00:00+08:00",
+      "finding": "尚未取得覆盖目标日的开放公告。",
+      "booking_entry": {
+        "state": "unverified",
+        "reason": "官方入口待核实"
+      },
+      "evidence_ids": [],
+      "action": "出发前核对景区官方公告与预约入口。"
+    },
+    "evidence": []
+  },
+  "transfer": {
+    "schema_version": "1.0",
+    "trace_id": "m02-fixture-transfer",
+    "generated_at": "2026-11-26T10:00:00+08:00",
+    "timezone": "Asia/Shanghai",
+    "run_status": "completed",
+    "persistence": "none",
+    "result": {
+      "kind": "transfer",
+      "data_mode": "fixture",
+      "date": "2026-11-28",
+      "from_id": "libo-station",
+      "to_id": "xiaoqikong-east-gate",
+      "segments": [
+        {
+          "from_id": "libo-exit",
+          "from_label": "荔波站出站口",
+          "to_id": "libo-pickup-demo",
+          "to_label": "测试候车点A",
+          "mode": "walk",
+          "travel_min": 10,
+          "status": "estimate",
+          "evidence_ids": [
+            "fx-leg-01"
+          ]
+        },
+        {
+          "from_id": "libo-pickup-demo",
+          "from_label": "测试候车点A",
+          "to_id": "xiaoqikong-east-gate",
+          "to_label": "小七孔东门游客中心",
+          "direction": "荔波站往东门",
+          "mode": "shuttle",
+          "travel_min": 40,
+          "status": "estimate",
+          "evidence_ids": [
+            "fx-leg-01"
+          ]
+        }
+      ],
+      "wait_min": 20,
+      "transfer_buffer_min": 15,
+      "last_service": {
+        "state": "unknown",
+        "evidence_ids": []
+      },
+      "arrival_check": {
+        "status": "unknown",
+        "reason": "缺到站时刻及有效末班依据"
+      },
+      "alternative": {
+        "label": "查询整车接驳",
+        "requires_choice": true
+      },
+      "next_question": "你预计几点到荔波站？",
+      "evidence_ids": [
+        "fx-leg-01"
+      ]
+    },
+    "evidence": [
+      {
+        "evidence_id": "fx-leg-01",
+        "source_url": "fixture://fx-leg-01",
+        "publisher": "测试夹具",
+        "source_group_id": "fx-leg-01",
+        "collected_at": "2026-11-26T10:00:00+08:00",
+        "applies_to": [
+          "2026-11-28"
+        ],
+        "source_kind": "fixture",
+        "data_mode": "fixture",
+        "excerpt": "仅用于说明结构，不是实际运营、天气或价格依据。"
+      }
+    ]
+  },
+  "cost_breakdown": {
+    "schema_version": "1.0",
+    "trace_id": "m02-fixture-cost_breakdown",
+    "generated_at": "2026-11-26T10:00:00+08:00",
+    "timezone": "Asia/Shanghai",
+    "run_status": "completed",
+    "persistence": "none",
+    "result": {
+      "kind": "cost_breakdown",
+      "data_mode": "fixture",
+      "currency": "CNY",
+      "party": {
+        "adults": 2,
+        "children": 1
+      },
+      "items": [
+        {
+          "item_id": "adult_ticket",
+          "category": "ticket",
+          "traveler_group": "adults",
+          "unit": "person",
+          "quantity": 2,
+          "unit_fen": 10000,
+          "subtotal_fen": 20000,
+          "eligibility": {
+            "status": "eligible",
+            "policy_evidence_id": "fx-fare-01"
+          },
+          "currency": "CNY",
+          "mandatory": true,
+          "price_status": "known",
+          "evidence_ids": [
+            "fx-fare-01"
+          ]
+        },
+        {
+          "item_id": "child_ticket",
+          "category": "ticket",
+          "traveler_group": "children",
+          "unit": "person",
+          "quantity": 1,
+          "unit_fen": null,
+          "subtotal_fen": null,
+          "eligibility": {
+            "status": "unknown",
+            "missing": [
+              "height_mm"
+            ]
+          },
+          "currency": "CNY",
+          "mandatory": true,
+          "price_status": "unknown",
+          "missing_reason": "儿童优惠资格待查",
+          "evidence_ids": []
+        },
+        {
+          "item_id": "shuttle",
+          "category": "shuttle",
+          "traveler_group": "all",
+          "unit": "person",
+          "quantity": 3,
+          "unit_fen": 3000,
+          "subtotal_fen": 9000,
+          "eligibility": {
+            "status": "eligible",
+            "policy_evidence_id": "fx-fare-01"
+          },
+          "currency": "CNY",
+          "mandatory": true,
+          "price_status": "known",
+          "evidence_ids": [
+            "fx-fare-01"
+          ]
+        }
+      ],
+      "eligibility": {
+        "child": "缺身高，待按模拟条款判断"
+      },
+      "known_lower_fen": 29000,
+      "total_fen": null,
+      "missing_costs": [
+        "child_ticket"
+      ],
+      "next_question": "孩子目前身高多少？",
+      "evidence_ids": [
+        "fx-fare-01"
+      ]
+    },
+    "evidence": [
+      {
+        "evidence_id": "fx-fare-01",
+        "source_url": "fixture://fx-fare-01",
+        "publisher": "测试夹具",
+        "source_group_id": "fx-fare-01",
+        "collected_at": "2026-11-26T10:00:00+08:00",
+        "applies_to": [
+          "2026-11-28"
+        ],
+        "source_kind": "fixture",
+        "data_mode": "fixture",
+        "excerpt": "仅用于说明结构，不是实际运营、天气或价格依据。"
+      }
+    ]
+  },
+  "candidates": {
+    "schema_version": "1.0",
+    "trace_id": "m02-fixture-candidates",
+    "generated_at": "2026-11-26T10:00:00+08:00",
+    "timezone": "Asia/Shanghai",
+    "run_status": "completed",
+    "persistence": "none",
+    "result": {
+      "kind": "candidates",
+      "candidate_kind": "hotel",
+      "data_mode": "fixture",
+      "currency": "CNY",
+      "basis": {
+        "check_in": "2026-11-28",
+        "nights": 1,
+        "adults": 2,
+        "rooms": 1
+      },
+      "primary_id": "hotel-A",
+      "alternative_ids": [
+        "hotel-B"
+      ],
+      "options": [
+        {
+          "id": "hotel-A",
+          "nightly_reference_fen": 24000,
+          "stay_total_fen": null,
+          "reason": "到次日第一站较近",
+          "cancellation": {
+            "status": "unconfirmed"
+          },
+          "next_stop_leg": {
+            "to_id": "first-stop-demo",
+            "travel_min": 10,
+            "status": "estimate"
+          },
+          "missing_costs": [
+            "入住总价"
+          ],
+          "evidence_ids": [
+            "fx-hotel-01"
+          ]
+        },
+        {
+          "id": "hotel-B",
+          "nightly_reference_fen": 20000,
+          "stay_total_fen": null,
+          "reason": "每晚参考价较低",
+          "cancellation": {
+            "status": "unconfirmed"
+          },
+          "next_stop_leg": {
+            "to_id": "first-stop-demo",
+            "travel_min": 25,
+            "status": "estimate"
+          },
+          "missing_costs": [
+            "入住总价"
+          ],
+          "evidence_ids": [
+            "fx-hotel-01"
+          ]
+        }
+      ],
+      "price_meaning": "参考报价",
+      "inventory_status": "unverified",
+      "booking_status": "not_booked",
+      "evidence_ids": [
+        "fx-hotel-01"
+      ]
+    },
+    "evidence": [
+      {
+        "evidence_id": "fx-hotel-01",
+        "source_url": "fixture://fx-hotel-01",
+        "publisher": "测试夹具",
+        "source_group_id": "fx-hotel-01",
+        "collected_at": "2026-11-26T10:00:00+08:00",
+        "applies_to": [
+          "2026-11-28"
+        ],
+        "source_kind": "fixture",
+        "data_mode": "fixture",
+        "excerpt": "仅用于说明结构，不是实际运营、天气或价格依据。"
+      }
+    ]
+  },
+  "itinerary": {
+    "schema_version": "1.0",
+    "trace_id": "m02-fixture-itinerary",
+    "generated_at": "2026-11-26T10:00:00+08:00",
+    "timezone": "Asia/Shanghai",
+    "run_status": "completed",
+    "persistence": "none",
+    "result": {
+      "kind": "itinerary",
+      "data_mode": "fixture",
+      "draft_id": "draft-demo",
+      "save_status": "draft",
+      "feasibility": "needs_verification",
+      "party": {
+        "adults": 2
+      },
+      "budget": {
+        "scope": "group",
+        "cap_fen": 80000,
+        "known_lower_fen": 0,
+        "total_fen": null,
+        "missing_costs": [
+          "门票",
+          "住宿",
+          "餐饮",
+          "交通"
+        ]
+      },
+      "days": [
+        {
+          "date": "2026-11-28",
+          "next_stop_id": null,
+          "stops": [
+            {
+              "stop_id": "d1-a",
+              "poi_id": "jiaxiulou",
+              "entrance_id": "jiaxiu-entry-demo",
+              "plan_role": "alternative",
+              "arrival_local": "2026-11-28T10:00:00+08:00",
+              "departure_local": "2026-11-28T11:00:00+08:00",
+              "next_stop_id": null,
+              "incoming_leg": {
+                "from_id": "start-demo",
+                "to_id": "jiaxiu-entry-demo",
+                "mode": "walk",
+                "travel_min": 20,
+                "status": "estimate",
+                "evidence_ids": [
+                  "fx-trip-01"
+                ]
+              },
+              "cost": {
+                "status": "unknown",
+                "currency": "CNY",
+                "total_fen": null,
+                "items": [],
+                "missing_costs": [
+                  "门票政策待查"
+                ]
+              },
+              "opening": {
+                "status": "unconfirmed",
+                "applies_to": "2026-11-28"
+              },
+              "evidence_ids": [
+                "fx-trip-01"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "2026-11-29",
+          "next_stop_id": null,
+          "stops": [
+            {
+              "stop_id": "d2-a",
+              "poi_id": "guizhou-museum",
+              "entrance_id": "museum-entry-demo",
+              "plan_role": "alternative",
+              "arrival_local": "2026-11-29T09:30:00+08:00",
+              "departure_local": "2026-11-29T11:30:00+08:00",
+              "next_stop_id": null,
+              "incoming_leg": {
+                "from_id": "hotel-demo",
+                "to_id": "museum-entry-demo",
+                "mode": "car",
+                "travel_min": 30,
+                "status": "estimate",
+                "evidence_ids": [
+                  "fx-trip-01"
+                ]
+              },
+              "cost": {
+                "status": "unknown",
+                "currency": "CNY",
+                "total_fen": null,
+                "items": [],
+                "missing_costs": [
+                  "预约与交通费用待查"
+                ]
+              },
+              "opening": {
+                "status": "unconfirmed",
+                "applies_to": "2026-11-29"
+              },
+              "evidence_ids": [
+                "fx-trip-01"
+              ]
+            }
+          ]
+        }
+      ],
+      "locked_items": [
+        {
+          "lock_id": "return-ticket",
+          "kind": "rail",
+          "locked": true,
+          "departure_at": "2026-11-29T18:30:00+08:00",
+          "confirmation": "user_confirmed"
+        }
+      ],
+      "pending": [
+        "开放及预约",
+        "费用完整性"
+      ]
+    },
+    "evidence": [
+      {
+        "evidence_id": "fx-trip-01",
+        "source_url": "fixture://fx-trip-01",
+        "publisher": "测试夹具",
+        "source_group_id": "fx-trip-01",
+        "collected_at": "2026-11-26T10:00:00+08:00",
+        "applies_to": [
+          "2026-11-28",
+          "2026-11-29"
+        ],
+        "source_kind": "fixture",
+        "data_mode": "fixture",
+        "excerpt": "仅用于说明结构，不是实际运营、天气或价格依据。"
+      }
+    ]
+  },
+  "patch_preview": {
+    "schema_version": "1.0",
+    "trace_id": "m02-fixture-patch_preview",
+    "generated_at": "2026-11-26T10:00:00+08:00",
+    "timezone": "Asia/Shanghai",
+    "run_status": "completed",
+    "persistence": "none",
+    "result": {
+      "kind": "patch_preview",
+      "data_mode": "fixture",
+      "proposal_id": "proposal-2",
+      "trip_id": "trip-A",
+      "base_revision": 7,
+      "expires_at": "2026-11-26T10:15:00+08:00",
+      "scope": {
+        "dates": [
+          "2026-11-29"
+        ]
+      },
+      "save_status": "awaiting_confirmation",
+      "changes": [
+        {
+          "stop_id": "d2-b",
+          "before": "户外游览",
+          "after": "室内候选A"
+        }
+      ],
+      "time_impact": {
+        "delta_min": 20,
+        "return_buffer_min": 45
+      },
+      "cost_impact": {
+        "delta_fen": 5000,
+        "currency": "CNY",
+        "status": "estimate"
+      },
+      "unchanged": [
+        "day-1",
+        "return-ticket"
+      ],
+      "needs_user_choice": true,
+      "rule_status": "needs_verification",
+      "pending": [
+        "室内候选预约与开放"
+      ]
+    },
+    "evidence": []
+  },
+  "bundle": {
+    "schema_version": "1.0",
+    "trace_id": "m02-fixture-bundle",
+    "generated_at": "2026-11-26T10:00:00+08:00",
+    "timezone": "Asia/Shanghai",
+    "run_status": "partial",
+    "persistence": "none",
+    "result": {
+      "kind": "bundle",
+      "primary": {
+        "kind": "weather_unavailable",
+        "place_id": "qingyan",
+        "target_date": "2026-11-27",
+        "reason": "timeout",
+        "checked_at": "2026-11-26T10:00:00+08:00",
+        "action": "临出发前再核对预报。"
+      },
+      "supplements": [
+        {
+          "kind": "cost_breakdown",
+          "data_mode": "fixture",
+          "currency": "CNY",
+          "party": {
+            "adults": 2,
+            "children": 0
+          },
+          "items": [
+            {
+              "item_id": "adult_ticket",
+              "category": "ticket",
+              "traveler_group": "adults",
+              "unit": "person",
+              "quantity": 2,
+              "unit_fen": 10000,
+              "subtotal_fen": 20000,
+              "eligibility": {
+                "status": "eligible",
+                "policy_evidence_id": "fx-fare-01"
+              },
+              "currency": "CNY",
+              "mandatory": true,
+              "price_status": "known",
+              "evidence_ids": [
+                "fx-fare-01"
+              ]
+            }
+          ],
+          "eligibility": {
+            "adults": "模拟普通成人票"
+          },
+          "known_lower_fen": 20000,
+          "total_fen": 20000,
+          "missing_costs": [],
+          "next_question": null,
+          "evidence_ids": [
+            "fx-fare-01"
+          ]
+        }
+      ],
+      "next_question": null
+    },
+    "evidence": [
+      {
+        "evidence_id": "fx-fare-01",
+        "source_url": "fixture://fx-fare-01",
+        "publisher": "测试夹具",
+        "source_group_id": "fx-fare-01",
+        "collected_at": "2026-11-26T10:00:00+08:00",
+        "applies_to": [
+          "2026-11-27"
+        ],
+        "source_kind": "fixture",
+        "data_mode": "fixture",
+        "excerpt": "仅用于说明结构，不是实际运营、天气或价格依据。"
+      }
+    ]
+  },
+  "clarification": {
+    "schema_version": "1.0",
+    "trace_id": "m02-fixture-clarification",
+    "generated_at": "2026-11-26T10:00:00+08:00",
+    "timezone": "Asia/Shanghai",
+    "run_status": "needs_input",
+    "persistence": "none",
+    "result": {
+      "kind": "clarification",
+      "field": "start_date",
+      "question": "这两天计划从哪一天开始？",
+      "known": {
+        "destination": "贵阳",
+        "adults": 2,
+        "days": 2,
+        "group_cap_fen": 80000
+      }
+    },
+    "evidence": []
+  }
+}

@@ -1,0 +1,52 @@
+:root { color-scheme: light; font: 15px/1.65 system-ui, "Microsoft YaHei", sans-serif; color: #172a2a; background: #edf3f1; }
+body { margin: 0; }
+main { width: min(100% - 36px, 1130px); margin: 36px auto; }
+h1 { font-size: clamp(24px, 4vw, 42px); line-height: 1.2; color: #153b35; margin: 0 0 12px; }
+h2 { margin: 0 0 12px; color: #153b35; font-size: 1.25rem; line-height: 1.3; }
+h3 { margin: 0; font-size: 1rem; color: #28574f; }
+p { margin: 6px 0; }
+header { margin-bottom: 24px; color: #355650; }
+#samples, #edge-cases { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; align-items: start; }
+#samples:has(> article:only-child) { grid-template-columns: minmax(0, 640px); }
+#edge-cases { margin-top: 28px; }
+.result, [data-error] { background: #fff; border: 1px solid #bfd1ca; border-radius: 12px; padding: 17px 18px; overflow-wrap: anywhere; }
+.result[data-kind="ack"] { border-left: 4px solid #228369; }
+.result[data-kind="itinerary"], .result[data-kind="patch_preview"] { border-top: 4px solid #347966; }
+.fixture { color: #66400e; background: #fff4df; padding: 2px 8px; display: inline-block; border-radius: 4px; font-size: .84rem; margin: 0 0 7px; }
+dl { display: grid; grid-template-columns: minmax(70px, 28%) 1fr; gap: 4px 12px; margin: 8px 0; }
+dt { color: #396156; }
+dd { margin: 0; }
+ul, ol { padding-left: 22px; margin: 8px 0; }
+li + li { margin-top: 4px; }
+.day { border-left: 2px solid #c8ded7; padding-left: 9px; }
+.stop { font-size: .93rem; }
+.action { color: #144d3f; background: #e4f2ed; padding: 5px 8px; border-radius: 5px; }
+details { margin-top: 9px; border-top: 1px solid #dce8e4; padding: 6px 0 0; }
+summary { color: #24594e; cursor: pointer; }
+a { color: #235951; }
+[data-error] { color: #7a401b; }
+@media (max-width: 710px) {
+  main { width: calc(100% - 24px); margin: 20px auto; }
+  #samples, #edge-cases { grid-template-columns: minmax(0, 1fr); }
+}
+
+
+.chat { max-width: 760px; }
+#chat-log { display: grid; gap: 16px; margin: 14px 0; }
+.chat-user { width: fit-content; max-width: 80%; margin: 0 0 8px auto; padding: 6px 12px; border-radius: 10px; background: #dcefe7; overflow-wrap: anywhere; }
+.chat-note { padding: 12px; background: white; border-radius: 8px; }
+#chat-prompts { display: flex; flex-wrap: wrap; gap: 6px; }
+#chat-form { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 8px; margin: 18px 0; }
+.chat button, .chat input { font: inherit; color: #153b35; background: white; padding: 7px 10px; border: 1px solid #9cbcb1; border-radius: 7px; }
+.chat button { cursor: pointer; }
+#chat-form button { color: white; background: #21594a; }
+
+#patch-form { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; margin: 6px 0 12px; }
+#patch-form button, #patch-confirm { color: white; background: #21594a; }
+.patch-workbench button:disabled { opacity: .58; cursor: wait; }
+.patch-actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 16px; }
+#patch-status:not(:empty), #traveller-timeline { margin: 18px 0; }
+#locked-return { margin: 6px 0 12px; font-weight: 600; }
+@media (max-width: 480px) {
+  #patch-form { grid-template-columns: minmax(0, 1fr); }
+}

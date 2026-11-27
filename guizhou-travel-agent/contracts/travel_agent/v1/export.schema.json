@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "revision",
+    "format"
+  ],
+  "properties": {
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "format": {
+      "enum": [
+        "html",
+        "pdf"
+      ]
+    }
+  }
+}

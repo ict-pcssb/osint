@@ -1,0 +1,1999 @@
+{
+  "dataset_version": "m12-model-v1",
+  "label_version": "maintainer-draft-v1",
+  "label_review": "pending",
+  "clock": "2026-11-26T10:00:00+08:00",
+  "repeats": 3,
+  "cases": [
+    {
+      "case_id": "ack-01",
+      "message": "我计划去青岩。",
+      "family": "确认",
+      "expected_kind": "ack",
+      "expected_intent": "ack",
+      "expected_tools": [],
+      "resolved_parameters": {},
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "ack-02",
+      "message": "我准备去文昌阁。",
+      "family": "确认",
+      "expected_kind": "ack",
+      "expected_intent": "ack",
+      "expected_tools": [],
+      "resolved_parameters": {},
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "ack-03",
+      "message": "我打算去甲秀楼。",
+      "family": "确认",
+      "expected_kind": "ack",
+      "expected_intent": "ack",
+      "expected_tools": [],
+      "resolved_parameters": {},
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "ack-04",
+      "message": "我周六去黄果树。",
+      "family": "确认",
+      "expected_kind": "ack",
+      "expected_intent": "ack",
+      "expected_tools": [],
+      "resolved_parameters": {},
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "ack-05",
+      "message": "我明天去青岩。",
+      "family": "确认",
+      "expected_kind": "ack",
+      "expected_intent": "ack",
+      "expected_tools": [],
+      "resolved_parameters": {},
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "ack-06",
+      "message": "我今天去甲秀楼。",
+      "family": "确认",
+      "expected_kind": "ack",
+      "expected_intent": "ack",
+      "expected_tools": [],
+      "resolved_parameters": {},
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "ack-07",
+      "message": "我会去梵净山。",
+      "family": "确认",
+      "expected_kind": "ack",
+      "expected_intent": "ack",
+      "expected_tools": [],
+      "resolved_parameters": {},
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "ack-08",
+      "message": "去贵州省博物馆。",
+      "family": "确认",
+      "expected_kind": "ack",
+      "expected_intent": "ack",
+      "expected_tools": [],
+      "resolved_parameters": {},
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "ack-09",
+      "message": "我们两个人，准备去观山湖。",
+      "family": "确认",
+      "expected_kind": "ack",
+      "expected_intent": "ack",
+      "expected_tools": [],
+      "resolved_parameters": {},
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "ack-10",
+      "message": "我周六准备去青岩。",
+      "family": "确认",
+      "expected_kind": "ack",
+      "expected_intent": "ack",
+      "expected_tools": [],
+      "resolved_parameters": {},
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "weather-01",
+      "message": "明天青岩下雨吗。",
+      "family": "单问",
+      "expected_kind": "weather",
+      "expected_intent": "weather",
+      "expected_tools": [
+        "get_destination_weather"
+      ],
+      "resolved_parameters": {
+        "place_id": "qingyan",
+        "date": "2026-11-27"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "weather-02",
+      "message": "请处理一下，明天青岩下雨吗。",
+      "family": "单问",
+      "expected_kind": "weather",
+      "expected_intent": "weather",
+      "expected_tools": [
+        "get_destination_weather"
+      ],
+      "resolved_parameters": {
+        "place_id": "qingyan",
+        "date": "2026-11-27"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "weather-03",
+      "message": "我想问，明天青岩下雨吗？",
+      "family": "单问",
+      "expected_kind": "weather",
+      "expected_intent": "weather",
+      "expected_tools": [
+        "get_destination_weather"
+      ],
+      "resolved_parameters": {
+        "place_id": "qingyan",
+        "date": "2026-11-27"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "weather-04",
+      "message": "可以帮忙吗，明天青岩下雨吗。",
+      "family": "单问",
+      "expected_kind": "weather",
+      "expected_intent": "weather",
+      "expected_tools": [
+        "get_destination_weather"
+      ],
+      "resolved_parameters": {
+        "place_id": "qingyan",
+        "date": "2026-11-27"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "weather-05",
+      "message": "帮我看看，明天青岩下雨吗。",
+      "family": "单问",
+      "expected_kind": "weather",
+      "expected_intent": "weather",
+      "expected_tools": [
+        "get_destination_weather"
+      ],
+      "resolved_parameters": {
+        "place_id": "qingyan",
+        "date": "2026-11-27"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "weather-06",
+      "message": "麻烦确认，明天青岩下雨吗。",
+      "family": "单问",
+      "expected_kind": "weather",
+      "expected_intent": "weather",
+      "expected_tools": [
+        "get_destination_weather"
+      ],
+      "resolved_parameters": {
+        "place_id": "qingyan",
+        "date": "2026-11-27"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "weather-07",
+      "message": "我需要这条信息，明天青岩下雨吗。",
+      "family": "单问",
+      "expected_kind": "weather",
+      "expected_intent": "weather",
+      "expected_tools": [
+        "get_destination_weather"
+      ],
+      "resolved_parameters": {
+        "place_id": "qingyan",
+        "date": "2026-11-27"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "weather-08",
+      "message": "请告诉我，明天青岩下雨吗？",
+      "family": "单问",
+      "expected_kind": "weather",
+      "expected_intent": "weather",
+      "expected_tools": [
+        "get_destination_weather"
+      ],
+      "resolved_parameters": {
+        "place_id": "qingyan",
+        "date": "2026-11-27"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "weather-09",
+      "message": "我还有一个问题，明天青岩下雨吗。",
+      "family": "单问",
+      "expected_kind": "weather",
+      "expected_intent": "weather",
+      "expected_tools": [
+        "get_destination_weather"
+      ],
+      "resolved_parameters": {
+        "place_id": "qingyan",
+        "date": "2026-11-27"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "weather-10",
+      "message": "旅行前再问一下，明天青岩下雨吗。",
+      "family": "单问",
+      "expected_kind": "weather",
+      "expected_intent": "weather",
+      "expected_tools": [
+        "get_destination_weather"
+      ],
+      "resolved_parameters": {
+        "place_id": "qingyan",
+        "date": "2026-11-27"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "verification-01",
+      "message": "黄果树水帘洞周六开放吗。",
+      "family": "单问",
+      "expected_kind": "verification",
+      "expected_intent": "verification",
+      "expected_tools": [
+        "search_travel_sources"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "scenic_area": "黄果树"
+      },
+      "negative": true,
+      "negative_reason": "empty_notice"
+    },
+    {
+      "case_id": "verification-02",
+      "message": "请处理一下，黄果树水帘洞周六开放吗。",
+      "family": "单问",
+      "expected_kind": "verification",
+      "expected_intent": "verification",
+      "expected_tools": [
+        "search_travel_sources"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "scenic_area": "黄果树"
+      },
+      "negative": true,
+      "negative_reason": "empty_notice"
+    },
+    {
+      "case_id": "verification-03",
+      "message": "我想问，黄果树水帘洞周六开放吗？",
+      "family": "单问",
+      "expected_kind": "verification",
+      "expected_intent": "verification",
+      "expected_tools": [
+        "search_travel_sources"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "scenic_area": "黄果树"
+      },
+      "negative": true,
+      "negative_reason": "empty_notice"
+    },
+    {
+      "case_id": "verification-04",
+      "message": "可以帮忙吗，黄果树水帘洞周六开放吗。",
+      "family": "单问",
+      "expected_kind": "verification",
+      "expected_intent": "verification",
+      "expected_tools": [
+        "search_travel_sources"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "scenic_area": "黄果树"
+      },
+      "negative": true,
+      "negative_reason": "empty_notice"
+    },
+    {
+      "case_id": "verification-05",
+      "message": "帮我看看，黄果树水帘洞周六开放吗。",
+      "family": "单问",
+      "expected_kind": "verification",
+      "expected_intent": "verification",
+      "expected_tools": [
+        "search_travel_sources"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "scenic_area": "黄果树"
+      },
+      "negative": true,
+      "negative_reason": "empty_notice"
+    },
+    {
+      "case_id": "verification-06",
+      "message": "麻烦确认，黄果树水帘洞周六开放吗。",
+      "family": "单问",
+      "expected_kind": "verification",
+      "expected_intent": "verification",
+      "expected_tools": [
+        "search_travel_sources"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "scenic_area": "黄果树"
+      },
+      "negative": true,
+      "negative_reason": "reprints"
+    },
+    {
+      "case_id": "verification-07",
+      "message": "我需要这条信息，黄果树水帘洞周六开放吗。",
+      "family": "单问",
+      "expected_kind": "verification",
+      "expected_intent": "verification",
+      "expected_tools": [
+        "search_travel_sources"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "scenic_area": "黄果树"
+      },
+      "negative": true,
+      "negative_reason": "reprints"
+    },
+    {
+      "case_id": "verification-08",
+      "message": "请告诉我，黄果树水帘洞周六开放吗？",
+      "family": "单问",
+      "expected_kind": "verification",
+      "expected_intent": "verification",
+      "expected_tools": [
+        "search_travel_sources"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "scenic_area": "黄果树"
+      },
+      "negative": true,
+      "negative_reason": "reprints"
+    },
+    {
+      "case_id": "verification-09",
+      "message": "我还有一个问题，黄果树水帘洞周六开放吗。",
+      "family": "单问",
+      "expected_kind": "verification",
+      "expected_intent": "verification",
+      "expected_tools": [
+        "search_travel_sources"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "scenic_area": "黄果树"
+      },
+      "negative": true,
+      "negative_reason": "reprints"
+    },
+    {
+      "case_id": "verification-10",
+      "message": "旅行前再问一下，黄果树水帘洞周六开放吗。",
+      "family": "单问",
+      "expected_kind": "verification",
+      "expected_intent": "verification",
+      "expected_tools": [
+        "search_travel_sources"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "scenic_area": "黄果树"
+      },
+      "negative": true,
+      "negative_reason": "reprints"
+    },
+    {
+      "case_id": "transfer-01",
+      "message": "周六荔波站到小七孔东门怎么走、末班几点。",
+      "family": "单问",
+      "expected_kind": "transfer",
+      "expected_intent": "transfer",
+      "expected_tools": [
+        "fixture_transfer"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "from_id": "libo-station",
+        "to_id": "xiaoqikong-east-gate"
+      },
+      "negative": true,
+      "negative_reason": "unknown_last_service"
+    },
+    {
+      "case_id": "transfer-02",
+      "message": "请处理一下，周六荔波站到小七孔东门怎么走、末班几点。",
+      "family": "单问",
+      "expected_kind": "transfer",
+      "expected_intent": "transfer",
+      "expected_tools": [
+        "fixture_transfer"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "from_id": "libo-station",
+        "to_id": "xiaoqikong-east-gate"
+      },
+      "negative": true,
+      "negative_reason": "unknown_last_service"
+    },
+    {
+      "case_id": "transfer-03",
+      "message": "我想问，周六荔波站到小七孔东门怎么走、末班几点？",
+      "family": "单问",
+      "expected_kind": "transfer",
+      "expected_intent": "transfer",
+      "expected_tools": [
+        "fixture_transfer"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "from_id": "libo-station",
+        "to_id": "xiaoqikong-east-gate"
+      },
+      "negative": true,
+      "negative_reason": "unknown_last_service"
+    },
+    {
+      "case_id": "transfer-04",
+      "message": "可以帮忙吗，周六荔波站到小七孔东门怎么走、末班几点。",
+      "family": "单问",
+      "expected_kind": "transfer",
+      "expected_intent": "transfer",
+      "expected_tools": [
+        "fixture_transfer"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "from_id": "libo-station",
+        "to_id": "xiaoqikong-east-gate"
+      },
+      "negative": true,
+      "negative_reason": "unknown_last_service"
+    },
+    {
+      "case_id": "transfer-05",
+      "message": "帮我看看，周六荔波站到小七孔东门怎么走、末班几点。",
+      "family": "单问",
+      "expected_kind": "transfer",
+      "expected_intent": "transfer",
+      "expected_tools": [
+        "fixture_transfer"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "from_id": "libo-station",
+        "to_id": "xiaoqikong-east-gate"
+      },
+      "negative": true,
+      "negative_reason": "unknown_last_service"
+    },
+    {
+      "case_id": "transfer-06",
+      "message": "麻烦确认，周六荔波站到小七孔东门怎么走、末班几点。",
+      "family": "单问",
+      "expected_kind": "transfer",
+      "expected_intent": "transfer",
+      "expected_tools": [
+        "fixture_transfer"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "from_id": "libo-station",
+        "to_id": "xiaoqikong-east-gate"
+      },
+      "negative": true,
+      "negative_reason": "unknown_last_service"
+    },
+    {
+      "case_id": "transfer-07",
+      "message": "我需要这条信息，周六荔波站到小七孔东门怎么走、末班几点。",
+      "family": "单问",
+      "expected_kind": "transfer",
+      "expected_intent": "transfer",
+      "expected_tools": [
+        "fixture_transfer"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "from_id": "libo-station",
+        "to_id": "xiaoqikong-east-gate"
+      },
+      "negative": true,
+      "negative_reason": "unknown_last_service"
+    },
+    {
+      "case_id": "transfer-08",
+      "message": "请告诉我，周六荔波站到小七孔东门怎么走、末班几点？",
+      "family": "单问",
+      "expected_kind": "transfer",
+      "expected_intent": "transfer",
+      "expected_tools": [
+        "fixture_transfer"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "from_id": "libo-station",
+        "to_id": "xiaoqikong-east-gate"
+      },
+      "negative": true,
+      "negative_reason": "unknown_last_service"
+    },
+    {
+      "case_id": "transfer-09",
+      "message": "我还有一个问题，周六荔波站到小七孔东门怎么走、末班几点。",
+      "family": "单问",
+      "expected_kind": "transfer",
+      "expected_intent": "transfer",
+      "expected_tools": [
+        "fixture_transfer"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "from_id": "libo-station",
+        "to_id": "xiaoqikong-east-gate"
+      },
+      "negative": true,
+      "negative_reason": "unknown_last_service"
+    },
+    {
+      "case_id": "transfer-10",
+      "message": "旅行前再问一下，周六荔波站到小七孔东门怎么走、末班几点。",
+      "family": "单问",
+      "expected_kind": "transfer",
+      "expected_intent": "transfer",
+      "expected_tools": [
+        "fixture_transfer"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "from_id": "libo-station",
+        "to_id": "xiaoqikong-east-gate"
+      },
+      "negative": true,
+      "negative_reason": "unknown_last_service"
+    },
+    {
+      "case_id": "cost_breakdown-01",
+      "message": "两大一小周六去小七孔，费用是多少。",
+      "family": "单问",
+      "expected_kind": "cost_breakdown",
+      "expected_intent": "cost_breakdown",
+      "expected_tools": [
+        "fixture_cost"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "place_id": "xiaoqikong",
+        "adults": 2,
+        "children": 1
+      },
+      "negative": true,
+      "negative_reason": "unknown_price"
+    },
+    {
+      "case_id": "cost_breakdown-02",
+      "message": "请处理一下，两大一小周六去小七孔，费用是多少。",
+      "family": "单问",
+      "expected_kind": "cost_breakdown",
+      "expected_intent": "cost_breakdown",
+      "expected_tools": [
+        "fixture_cost"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "place_id": "xiaoqikong",
+        "adults": 2,
+        "children": 1
+      },
+      "negative": true,
+      "negative_reason": "unknown_price"
+    },
+    {
+      "case_id": "cost_breakdown-03",
+      "message": "我想问，两大一小周六去小七孔，费用是多少？",
+      "family": "单问",
+      "expected_kind": "cost_breakdown",
+      "expected_intent": "cost_breakdown",
+      "expected_tools": [
+        "fixture_cost"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "place_id": "xiaoqikong",
+        "adults": 2,
+        "children": 1
+      },
+      "negative": true,
+      "negative_reason": "unknown_price"
+    },
+    {
+      "case_id": "cost_breakdown-04",
+      "message": "可以帮忙吗，两大一小周六去小七孔，费用是多少。",
+      "family": "单问",
+      "expected_kind": "cost_breakdown",
+      "expected_intent": "cost_breakdown",
+      "expected_tools": [
+        "fixture_cost"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "place_id": "xiaoqikong",
+        "adults": 2,
+        "children": 1
+      },
+      "negative": true,
+      "negative_reason": "unknown_price"
+    },
+    {
+      "case_id": "cost_breakdown-05",
+      "message": "帮我看看，两大一小周六去小七孔，费用是多少。",
+      "family": "单问",
+      "expected_kind": "cost_breakdown",
+      "expected_intent": "cost_breakdown",
+      "expected_tools": [
+        "fixture_cost"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "place_id": "xiaoqikong",
+        "adults": 2,
+        "children": 1
+      },
+      "negative": true,
+      "negative_reason": "unknown_price"
+    },
+    {
+      "case_id": "cost_breakdown-06",
+      "message": "麻烦确认，两大一小周六去小七孔，费用是多少。",
+      "family": "单问",
+      "expected_kind": "cost_breakdown",
+      "expected_intent": "cost_breakdown",
+      "expected_tools": [
+        "fixture_cost"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "place_id": "xiaoqikong",
+        "adults": 2,
+        "children": 1
+      },
+      "negative": true,
+      "negative_reason": "unknown_price"
+    },
+    {
+      "case_id": "cost_breakdown-07",
+      "message": "我需要这条信息，两大一小周六去小七孔，费用是多少。",
+      "family": "单问",
+      "expected_kind": "cost_breakdown",
+      "expected_intent": "cost_breakdown",
+      "expected_tools": [
+        "fixture_cost"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "place_id": "xiaoqikong",
+        "adults": 2,
+        "children": 1
+      },
+      "negative": true,
+      "negative_reason": "unknown_price"
+    },
+    {
+      "case_id": "cost_breakdown-08",
+      "message": "请告诉我，两大一小周六去小七孔，费用是多少？",
+      "family": "单问",
+      "expected_kind": "cost_breakdown",
+      "expected_intent": "cost_breakdown",
+      "expected_tools": [
+        "fixture_cost"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "place_id": "xiaoqikong",
+        "adults": 2,
+        "children": 1
+      },
+      "negative": true,
+      "negative_reason": "unknown_price"
+    },
+    {
+      "case_id": "cost_breakdown-09",
+      "message": "我还有一个问题，两大一小周六去小七孔，费用是多少。",
+      "family": "单问",
+      "expected_kind": "cost_breakdown",
+      "expected_intent": "cost_breakdown",
+      "expected_tools": [
+        "fixture_cost"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "place_id": "xiaoqikong",
+        "adults": 2,
+        "children": 1
+      },
+      "negative": true,
+      "negative_reason": "unknown_price"
+    },
+    {
+      "case_id": "cost_breakdown-10",
+      "message": "旅行前再问一下，两大一小周六去小七孔，费用是多少。",
+      "family": "单问",
+      "expected_kind": "cost_breakdown",
+      "expected_intent": "cost_breakdown",
+      "expected_tools": [
+        "fixture_cost"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "place_id": "xiaoqikong",
+        "adults": 2,
+        "children": 1
+      },
+      "negative": true,
+      "negative_reason": "unknown_price"
+    },
+    {
+      "case_id": "candidates-01",
+      "message": "贵阳周六入住，两位成人一间房一晚，查住宿候选。",
+      "family": "单问",
+      "expected_kind": "candidates",
+      "expected_intent": "candidates",
+      "expected_tools": [
+        "fixture_candidates"
+      ],
+      "resolved_parameters": {
+        "candidate_kind": "hotel",
+        "check_in": "2026-11-28",
+        "nights": 1,
+        "adults": 2,
+        "rooms": 1
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "candidates-02",
+      "message": "请处理一下，贵阳周六入住，两位成人一间房一晚，查住宿候选。",
+      "family": "单问",
+      "expected_kind": "candidates",
+      "expected_intent": "candidates",
+      "expected_tools": [
+        "fixture_candidates"
+      ],
+      "resolved_parameters": {
+        "candidate_kind": "hotel",
+        "check_in": "2026-11-28",
+        "nights": 1,
+        "adults": 2,
+        "rooms": 1
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "candidates-03",
+      "message": "我想问，贵阳周六入住，两位成人一间房一晚，查住宿候选？",
+      "family": "单问",
+      "expected_kind": "candidates",
+      "expected_intent": "candidates",
+      "expected_tools": [
+        "fixture_candidates"
+      ],
+      "resolved_parameters": {
+        "candidate_kind": "hotel",
+        "check_in": "2026-11-28",
+        "nights": 1,
+        "adults": 2,
+        "rooms": 1
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "candidates-04",
+      "message": "可以帮忙吗，贵阳周六入住，两位成人一间房一晚，查住宿候选。",
+      "family": "单问",
+      "expected_kind": "candidates",
+      "expected_intent": "candidates",
+      "expected_tools": [
+        "fixture_candidates"
+      ],
+      "resolved_parameters": {
+        "candidate_kind": "hotel",
+        "check_in": "2026-11-28",
+        "nights": 1,
+        "adults": 2,
+        "rooms": 1
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "candidates-05",
+      "message": "帮我看看，贵阳周六入住，两位成人一间房一晚，查住宿候选。",
+      "family": "单问",
+      "expected_kind": "candidates",
+      "expected_intent": "candidates",
+      "expected_tools": [
+        "fixture_candidates"
+      ],
+      "resolved_parameters": {
+        "candidate_kind": "hotel",
+        "check_in": "2026-11-28",
+        "nights": 1,
+        "adults": 2,
+        "rooms": 1
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "candidates-06",
+      "message": "麻烦确认，贵阳周六入住，两位成人一间房一晚，查住宿候选。",
+      "family": "单问",
+      "expected_kind": "candidates",
+      "expected_intent": "candidates",
+      "expected_tools": [
+        "fixture_candidates"
+      ],
+      "resolved_parameters": {
+        "candidate_kind": "hotel",
+        "check_in": "2026-11-28",
+        "nights": 1,
+        "adults": 2,
+        "rooms": 1
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "candidates-07",
+      "message": "我需要这条信息，贵阳周六入住，两位成人一间房一晚，查住宿候选。",
+      "family": "单问",
+      "expected_kind": "candidates",
+      "expected_intent": "candidates",
+      "expected_tools": [
+        "fixture_candidates"
+      ],
+      "resolved_parameters": {
+        "candidate_kind": "hotel",
+        "check_in": "2026-11-28",
+        "nights": 1,
+        "adults": 2,
+        "rooms": 1
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "candidates-08",
+      "message": "请告诉我，贵阳周六入住，两位成人一间房一晚，查住宿候选？",
+      "family": "单问",
+      "expected_kind": "candidates",
+      "expected_intent": "candidates",
+      "expected_tools": [
+        "fixture_candidates"
+      ],
+      "resolved_parameters": {
+        "candidate_kind": "hotel",
+        "check_in": "2026-11-28",
+        "nights": 1,
+        "adults": 2,
+        "rooms": 1
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "candidates-09",
+      "message": "我还有一个问题，贵阳周六入住，两位成人一间房一晚，查住宿候选。",
+      "family": "单问",
+      "expected_kind": "candidates",
+      "expected_intent": "candidates",
+      "expected_tools": [
+        "fixture_candidates"
+      ],
+      "resolved_parameters": {
+        "candidate_kind": "hotel",
+        "check_in": "2026-11-28",
+        "nights": 1,
+        "adults": 2,
+        "rooms": 1
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "candidates-10",
+      "message": "旅行前再问一下，贵阳周六入住，两位成人一间房一晚，查住宿候选。",
+      "family": "单问",
+      "expected_kind": "candidates",
+      "expected_intent": "candidates",
+      "expected_tools": [
+        "fixture_candidates"
+      ],
+      "resolved_parameters": {
+        "candidate_kind": "hotel",
+        "check_in": "2026-11-28",
+        "nights": 1,
+        "adults": 2,
+        "rooms": 1
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "itinerary-01",
+      "message": "周六出发贵阳两人两天，全团预算800元，排时间轴。",
+      "family": "规划",
+      "expected_kind": "itinerary",
+      "expected_intent": "itinerary",
+      "expected_tools": [
+        "fixture_itinerary"
+      ],
+      "resolved_parameters": {
+        "destination": "贵阳",
+        "adults": 2,
+        "days": 2,
+        "group_cap_fen": 80000,
+        "start_date": "2026-11-28"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "itinerary-02",
+      "message": "请处理一下，周六出发贵阳两人两天，全团预算800元，排时间轴。",
+      "family": "规划",
+      "expected_kind": "itinerary",
+      "expected_intent": "itinerary",
+      "expected_tools": [
+        "fixture_itinerary"
+      ],
+      "resolved_parameters": {
+        "destination": "贵阳",
+        "adults": 2,
+        "days": 2,
+        "group_cap_fen": 80000,
+        "start_date": "2026-11-28"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "itinerary-03",
+      "message": "我想问，周六出发贵阳两人两天，全团预算800元，排时间轴？",
+      "family": "规划",
+      "expected_kind": "itinerary",
+      "expected_intent": "itinerary",
+      "expected_tools": [
+        "fixture_itinerary"
+      ],
+      "resolved_parameters": {
+        "destination": "贵阳",
+        "adults": 2,
+        "days": 2,
+        "group_cap_fen": 80000,
+        "start_date": "2026-11-28"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "itinerary-04",
+      "message": "可以帮忙吗，周六出发贵阳两人两天，全团预算800元，排时间轴。",
+      "family": "规划",
+      "expected_kind": "itinerary",
+      "expected_intent": "itinerary",
+      "expected_tools": [
+        "fixture_itinerary"
+      ],
+      "resolved_parameters": {
+        "destination": "贵阳",
+        "adults": 2,
+        "days": 2,
+        "group_cap_fen": 80000,
+        "start_date": "2026-11-28"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "itinerary-05",
+      "message": "帮我看看，周六出发贵阳两人两天，全团预算800元，排时间轴。",
+      "family": "规划",
+      "expected_kind": "itinerary",
+      "expected_intent": "itinerary",
+      "expected_tools": [
+        "fixture_itinerary"
+      ],
+      "resolved_parameters": {
+        "destination": "贵阳",
+        "adults": 2,
+        "days": 2,
+        "group_cap_fen": 80000,
+        "start_date": "2026-11-28"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "itinerary-06",
+      "message": "麻烦确认，周六出发贵阳两人两天，全团预算800元，排时间轴。",
+      "family": "规划",
+      "expected_kind": "itinerary",
+      "expected_intent": "itinerary",
+      "expected_tools": [
+        "fixture_itinerary"
+      ],
+      "resolved_parameters": {
+        "destination": "贵阳",
+        "adults": 2,
+        "days": 2,
+        "group_cap_fen": 80000,
+        "start_date": "2026-11-28"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "itinerary-07",
+      "message": "我需要这条信息，周六出发贵阳两人两天，全团预算800元，排时间轴。",
+      "family": "规划",
+      "expected_kind": "itinerary",
+      "expected_intent": "itinerary",
+      "expected_tools": [
+        "fixture_itinerary"
+      ],
+      "resolved_parameters": {
+        "destination": "贵阳",
+        "adults": 2,
+        "days": 2,
+        "group_cap_fen": 80000,
+        "start_date": "2026-11-28"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "itinerary-08",
+      "message": "请告诉我，周六出发贵阳两人两天，全团预算800元，排时间轴？",
+      "family": "规划",
+      "expected_kind": "itinerary",
+      "expected_intent": "itinerary",
+      "expected_tools": [
+        "fixture_itinerary"
+      ],
+      "resolved_parameters": {
+        "destination": "贵阳",
+        "adults": 2,
+        "days": 2,
+        "group_cap_fen": 80000,
+        "start_date": "2026-11-28"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "itinerary-09",
+      "message": "我还有一个问题，周六出发贵阳两人两天，全团预算800元，排时间轴。",
+      "family": "规划",
+      "expected_kind": "itinerary",
+      "expected_intent": "itinerary",
+      "expected_tools": [
+        "fixture_itinerary"
+      ],
+      "resolved_parameters": {
+        "destination": "贵阳",
+        "adults": 2,
+        "days": 2,
+        "group_cap_fen": 80000,
+        "start_date": "2026-11-28"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "itinerary-10",
+      "message": "旅行前再问一下，周六出发贵阳两人两天，全团预算800元，排时间轴。",
+      "family": "规划",
+      "expected_kind": "itinerary",
+      "expected_intent": "itinerary",
+      "expected_tools": [
+        "fixture_itinerary"
+      ],
+      "resolved_parameters": {
+        "destination": "贵阳",
+        "adults": 2,
+        "days": 2,
+        "group_cap_fen": 80000,
+        "start_date": "2026-11-28"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "patch_preview-01",
+      "message": "第二天改成室内，返程票不变。",
+      "family": "修改",
+      "expected_kind": "patch_preview",
+      "expected_intent": "patch_preview",
+      "expected_tools": [
+        "fixture_patch_preview"
+      ],
+      "resolved_parameters": {
+        "trip_id": "trip-A",
+        "base_revision": 7,
+        "locked_ids": [
+          "return-ticket"
+        ],
+        "scope_date": "2026-11-29"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "patch_preview-02",
+      "message": "请处理一下，第二天改成室内，返程票不变。",
+      "family": "修改",
+      "expected_kind": "patch_preview",
+      "expected_intent": "patch_preview",
+      "expected_tools": [
+        "fixture_patch_preview"
+      ],
+      "resolved_parameters": {
+        "trip_id": "trip-A",
+        "base_revision": 7,
+        "locked_ids": [
+          "return-ticket"
+        ],
+        "scope_date": "2026-11-29"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "patch_preview-03",
+      "message": "我想问，第二天改成室内，返程票不变？",
+      "family": "修改",
+      "expected_kind": "patch_preview",
+      "expected_intent": "patch_preview",
+      "expected_tools": [
+        "fixture_patch_preview"
+      ],
+      "resolved_parameters": {
+        "trip_id": "trip-A",
+        "base_revision": 7,
+        "locked_ids": [
+          "return-ticket"
+        ],
+        "scope_date": "2026-11-29"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "patch_preview-04",
+      "message": "可以帮忙吗，第二天改成室内，返程票不变。",
+      "family": "修改",
+      "expected_kind": "patch_preview",
+      "expected_intent": "patch_preview",
+      "expected_tools": [
+        "fixture_patch_preview"
+      ],
+      "resolved_parameters": {
+        "trip_id": "trip-A",
+        "base_revision": 7,
+        "locked_ids": [
+          "return-ticket"
+        ],
+        "scope_date": "2026-11-29"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "patch_preview-05",
+      "message": "帮我看看，第二天改成室内，返程票不变。",
+      "family": "修改",
+      "expected_kind": "patch_preview",
+      "expected_intent": "patch_preview",
+      "expected_tools": [
+        "fixture_patch_preview"
+      ],
+      "resolved_parameters": {
+        "trip_id": "trip-A",
+        "base_revision": 7,
+        "locked_ids": [
+          "return-ticket"
+        ],
+        "scope_date": "2026-11-29"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "patch_preview-06",
+      "message": "麻烦确认，第二天改成室内，返程票不变。",
+      "family": "修改",
+      "expected_kind": "patch_preview",
+      "expected_intent": "patch_preview",
+      "expected_tools": [
+        "fixture_patch_preview"
+      ],
+      "resolved_parameters": {
+        "trip_id": "trip-A",
+        "base_revision": 7,
+        "locked_ids": [
+          "return-ticket"
+        ],
+        "scope_date": "2026-11-29"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "patch_preview-07",
+      "message": "我需要这条信息，第二天改成室内，返程票不变。",
+      "family": "修改",
+      "expected_kind": "patch_preview",
+      "expected_intent": "patch_preview",
+      "expected_tools": [
+        "fixture_patch_preview"
+      ],
+      "resolved_parameters": {
+        "trip_id": "trip-A",
+        "base_revision": 7,
+        "locked_ids": [
+          "return-ticket"
+        ],
+        "scope_date": "2026-11-29"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "patch_preview-08",
+      "message": "请告诉我，第二天改成室内，返程票不变？",
+      "family": "修改",
+      "expected_kind": "patch_preview",
+      "expected_intent": "patch_preview",
+      "expected_tools": [
+        "fixture_patch_preview"
+      ],
+      "resolved_parameters": {
+        "trip_id": "trip-A",
+        "base_revision": 7,
+        "locked_ids": [
+          "return-ticket"
+        ],
+        "scope_date": "2026-11-29"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "patch_preview-09",
+      "message": "我还有一个问题，第二天改成室内，返程票不变。",
+      "family": "修改",
+      "expected_kind": "patch_preview",
+      "expected_intent": "patch_preview",
+      "expected_tools": [
+        "fixture_patch_preview"
+      ],
+      "resolved_parameters": {
+        "trip_id": "trip-A",
+        "base_revision": 7,
+        "locked_ids": [
+          "return-ticket"
+        ],
+        "scope_date": "2026-11-29"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "patch_preview-10",
+      "message": "旅行前再问一下，第二天改成室内，返程票不变。",
+      "family": "修改",
+      "expected_kind": "patch_preview",
+      "expected_intent": "patch_preview",
+      "expected_tools": [
+        "fixture_patch_preview"
+      ],
+      "resolved_parameters": {
+        "trip_id": "trip-A",
+        "base_revision": 7,
+        "locked_ids": [
+          "return-ticket"
+        ],
+        "scope_date": "2026-11-29"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "recheck_report-01",
+      "message": "复查这份已保存的行程。",
+      "family": "复查",
+      "expected_kind": "recheck_report",
+      "expected_intent": "recheck_report",
+      "expected_tools": [
+        "fixture_recheck"
+      ],
+      "resolved_parameters": {
+        "trip_id": "trip-A",
+        "base_revision": 7
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "recheck_report-02",
+      "message": "请处理一下，复查这份已保存的行程。",
+      "family": "复查",
+      "expected_kind": "recheck_report",
+      "expected_intent": "recheck_report",
+      "expected_tools": [
+        "fixture_recheck"
+      ],
+      "resolved_parameters": {
+        "trip_id": "trip-A",
+        "base_revision": 7
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "recheck_report-03",
+      "message": "我想问，复查这份已保存的行程？",
+      "family": "复查",
+      "expected_kind": "recheck_report",
+      "expected_intent": "recheck_report",
+      "expected_tools": [
+        "fixture_recheck"
+      ],
+      "resolved_parameters": {
+        "trip_id": "trip-A",
+        "base_revision": 7
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "recheck_report-04",
+      "message": "可以帮忙吗，复查这份已保存的行程。",
+      "family": "复查",
+      "expected_kind": "recheck_report",
+      "expected_intent": "recheck_report",
+      "expected_tools": [
+        "fixture_recheck"
+      ],
+      "resolved_parameters": {
+        "trip_id": "trip-A",
+        "base_revision": 7
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "recheck_report-05",
+      "message": "帮我看看，复查这份已保存的行程。",
+      "family": "复查",
+      "expected_kind": "recheck_report",
+      "expected_intent": "recheck_report",
+      "expected_tools": [
+        "fixture_recheck"
+      ],
+      "resolved_parameters": {
+        "trip_id": "trip-A",
+        "base_revision": 7
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "recheck_report-06",
+      "message": "麻烦确认，复查这份已保存的行程。",
+      "family": "复查",
+      "expected_kind": "recheck_report",
+      "expected_intent": "recheck_report",
+      "expected_tools": [
+        "fixture_recheck"
+      ],
+      "resolved_parameters": {
+        "trip_id": "trip-A",
+        "base_revision": 7
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "recheck_report-07",
+      "message": "我需要这条信息，复查这份已保存的行程。",
+      "family": "复查",
+      "expected_kind": "recheck_report",
+      "expected_intent": "recheck_report",
+      "expected_tools": [
+        "fixture_recheck"
+      ],
+      "resolved_parameters": {
+        "trip_id": "trip-A",
+        "base_revision": 7
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "recheck_report-08",
+      "message": "请告诉我，复查这份已保存的行程？",
+      "family": "复查",
+      "expected_kind": "recheck_report",
+      "expected_intent": "recheck_report",
+      "expected_tools": [
+        "fixture_recheck"
+      ],
+      "resolved_parameters": {
+        "trip_id": "trip-A",
+        "base_revision": 7
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "recheck_report-09",
+      "message": "我还有一个问题，复查这份已保存的行程。",
+      "family": "复查",
+      "expected_kind": "recheck_report",
+      "expected_intent": "recheck_report",
+      "expected_tools": [
+        "fixture_recheck"
+      ],
+      "resolved_parameters": {
+        "trip_id": "trip-A",
+        "base_revision": 7
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "recheck_report-10",
+      "message": "旅行前再问一下，复查这份已保存的行程。",
+      "family": "复查",
+      "expected_kind": "recheck_report",
+      "expected_intent": "recheck_report",
+      "expected_tools": [
+        "fixture_recheck"
+      ],
+      "resolved_parameters": {
+        "trip_id": "trip-A",
+        "base_revision": 7
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "export_result-01",
+      "message": "把这份行程导出成 HTML 路书。",
+      "family": "导出",
+      "expected_kind": "export_result",
+      "expected_intent": "export_result",
+      "expected_tools": [
+        "fixture_export"
+      ],
+      "resolved_parameters": {
+        "trip_id": "trip-A",
+        "base_revision": 7,
+        "format": "html"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "export_result-02",
+      "message": "请处理一下，把这份行程导出成 HTML 路书。",
+      "family": "导出",
+      "expected_kind": "export_result",
+      "expected_intent": "export_result",
+      "expected_tools": [
+        "fixture_export"
+      ],
+      "resolved_parameters": {
+        "trip_id": "trip-A",
+        "base_revision": 7,
+        "format": "html"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "export_result-03",
+      "message": "我想问，把这份行程导出成 HTML 路书？",
+      "family": "导出",
+      "expected_kind": "export_result",
+      "expected_intent": "export_result",
+      "expected_tools": [
+        "fixture_export"
+      ],
+      "resolved_parameters": {
+        "trip_id": "trip-A",
+        "base_revision": 7,
+        "format": "html"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "export_result-04",
+      "message": "可以帮忙吗，把这份行程导出成 HTML 路书。",
+      "family": "导出",
+      "expected_kind": "export_result",
+      "expected_intent": "export_result",
+      "expected_tools": [
+        "fixture_export"
+      ],
+      "resolved_parameters": {
+        "trip_id": "trip-A",
+        "base_revision": 7,
+        "format": "html"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "export_result-05",
+      "message": "帮我看看，把这份行程导出成 HTML 路书。",
+      "family": "导出",
+      "expected_kind": "export_result",
+      "expected_intent": "export_result",
+      "expected_tools": [
+        "fixture_export"
+      ],
+      "resolved_parameters": {
+        "trip_id": "trip-A",
+        "base_revision": 7,
+        "format": "html"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "export_result-06",
+      "message": "麻烦确认，把这份行程导出成 HTML 路书。",
+      "family": "导出",
+      "expected_kind": "export_result",
+      "expected_intent": "export_result",
+      "expected_tools": [
+        "fixture_export"
+      ],
+      "resolved_parameters": {
+        "trip_id": "trip-A",
+        "base_revision": 7,
+        "format": "html"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "export_result-07",
+      "message": "我需要这条信息，把这份行程导出成 HTML 路书。",
+      "family": "导出",
+      "expected_kind": "export_result",
+      "expected_intent": "export_result",
+      "expected_tools": [
+        "fixture_export"
+      ],
+      "resolved_parameters": {
+        "trip_id": "trip-A",
+        "base_revision": 7,
+        "format": "html"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "export_result-08",
+      "message": "请告诉我，把这份行程导出成 HTML 路书？",
+      "family": "导出",
+      "expected_kind": "export_result",
+      "expected_intent": "export_result",
+      "expected_tools": [
+        "fixture_export"
+      ],
+      "resolved_parameters": {
+        "trip_id": "trip-A",
+        "base_revision": 7,
+        "format": "html"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "export_result-09",
+      "message": "我还有一个问题，把这份行程导出成 HTML 路书。",
+      "family": "导出",
+      "expected_kind": "export_result",
+      "expected_intent": "export_result",
+      "expected_tools": [
+        "fixture_export"
+      ],
+      "resolved_parameters": {
+        "trip_id": "trip-A",
+        "base_revision": 7,
+        "format": "html"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "export_result-10",
+      "message": "旅行前再问一下，把这份行程导出成 HTML 路书。",
+      "family": "导出",
+      "expected_kind": "export_result",
+      "expected_intent": "export_result",
+      "expected_tools": [
+        "fixture_export"
+      ],
+      "resolved_parameters": {
+        "trip_id": "trip-A",
+        "base_revision": 7,
+        "format": "html"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "clarification-01",
+      "message": "查一下天气。",
+      "family": "单问",
+      "expected_kind": "clarification",
+      "expected_intent": "weather",
+      "expected_tools": [],
+      "resolved_parameters": {},
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "clarification-02",
+      "message": "请处理一下，查一下天气。",
+      "family": "单问",
+      "expected_kind": "clarification",
+      "expected_intent": "weather",
+      "expected_tools": [],
+      "resolved_parameters": {},
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "clarification-03",
+      "message": "我想问，查一下天气？",
+      "family": "单问",
+      "expected_kind": "clarification",
+      "expected_intent": "weather",
+      "expected_tools": [],
+      "resolved_parameters": {},
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "clarification-04",
+      "message": "可以帮忙吗，查一下天气。",
+      "family": "单问",
+      "expected_kind": "clarification",
+      "expected_intent": "weather",
+      "expected_tools": [],
+      "resolved_parameters": {},
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "clarification-05",
+      "message": "帮我看看，查一下天气。",
+      "family": "单问",
+      "expected_kind": "clarification",
+      "expected_intent": "weather",
+      "expected_tools": [],
+      "resolved_parameters": {},
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "clarification-06",
+      "message": "麻烦确认，查一下天气。",
+      "family": "单问",
+      "expected_kind": "clarification",
+      "expected_intent": "weather",
+      "expected_tools": [],
+      "resolved_parameters": {},
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "clarification-07",
+      "message": "我需要这条信息，查一下天气。",
+      "family": "单问",
+      "expected_kind": "clarification",
+      "expected_intent": "weather",
+      "expected_tools": [],
+      "resolved_parameters": {},
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "clarification-08",
+      "message": "请告诉我，查一下天气？",
+      "family": "单问",
+      "expected_kind": "clarification",
+      "expected_intent": "weather",
+      "expected_tools": [],
+      "resolved_parameters": {},
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "clarification-09",
+      "message": "我还有一个问题，查一下天气。",
+      "family": "单问",
+      "expected_kind": "clarification",
+      "expected_intent": "weather",
+      "expected_tools": [],
+      "resolved_parameters": {},
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "clarification-10",
+      "message": "旅行前再问一下，查一下天气。",
+      "family": "单问",
+      "expected_kind": "clarification",
+      "expected_intent": "weather",
+      "expected_tools": [],
+      "resolved_parameters": {},
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "bundle-01",
+      "message": "周六青岩天气，以及荔波站到小七孔东门接驳。",
+      "family": "组合",
+      "expected_kind": "bundle",
+      "expected_intent": "weather",
+      "expected_tools": [
+        "get_destination_weather",
+        "fixture_transfer"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "place_id": "qingyan",
+        "from_id": "libo-station",
+        "to_id": "xiaoqikong-east-gate"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "bundle-02",
+      "message": "请处理一下，周六青岩天气，以及荔波站到小七孔东门接驳。",
+      "family": "组合",
+      "expected_kind": "bundle",
+      "expected_intent": "weather",
+      "expected_tools": [
+        "get_destination_weather",
+        "fixture_transfer"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "place_id": "qingyan",
+        "from_id": "libo-station",
+        "to_id": "xiaoqikong-east-gate"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "bundle-03",
+      "message": "我想问，周六青岩天气，以及荔波站到小七孔东门接驳？",
+      "family": "组合",
+      "expected_kind": "bundle",
+      "expected_intent": "weather",
+      "expected_tools": [
+        "get_destination_weather",
+        "fixture_transfer"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "place_id": "qingyan",
+        "from_id": "libo-station",
+        "to_id": "xiaoqikong-east-gate"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "bundle-04",
+      "message": "可以帮忙吗，周六青岩天气，以及荔波站到小七孔东门接驳。",
+      "family": "组合",
+      "expected_kind": "bundle",
+      "expected_intent": "weather",
+      "expected_tools": [
+        "get_destination_weather",
+        "fixture_transfer"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "place_id": "qingyan",
+        "from_id": "libo-station",
+        "to_id": "xiaoqikong-east-gate"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "bundle-05",
+      "message": "帮我看看，周六青岩天气，以及荔波站到小七孔东门接驳。",
+      "family": "组合",
+      "expected_kind": "bundle",
+      "expected_intent": "weather",
+      "expected_tools": [
+        "get_destination_weather",
+        "fixture_transfer"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "place_id": "qingyan",
+        "from_id": "libo-station",
+        "to_id": "xiaoqikong-east-gate"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "bundle-06",
+      "message": "麻烦确认，周六青岩天气，以及荔波站到小七孔东门接驳。",
+      "family": "组合",
+      "expected_kind": "bundle",
+      "expected_intent": "weather",
+      "expected_tools": [
+        "get_destination_weather",
+        "fixture_transfer"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "place_id": "qingyan",
+        "from_id": "libo-station",
+        "to_id": "xiaoqikong-east-gate"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "bundle-07",
+      "message": "我需要这条信息，周六青岩天气，以及荔波站到小七孔东门接驳。",
+      "family": "组合",
+      "expected_kind": "bundle",
+      "expected_intent": "weather",
+      "expected_tools": [
+        "get_destination_weather",
+        "fixture_transfer"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "place_id": "qingyan",
+        "from_id": "libo-station",
+        "to_id": "xiaoqikong-east-gate"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "bundle-08",
+      "message": "请告诉我，周六青岩天气，以及荔波站到小七孔东门接驳？",
+      "family": "组合",
+      "expected_kind": "bundle",
+      "expected_intent": "weather",
+      "expected_tools": [
+        "get_destination_weather",
+        "fixture_transfer"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "place_id": "qingyan",
+        "from_id": "libo-station",
+        "to_id": "xiaoqikong-east-gate"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "bundle-09",
+      "message": "我还有一个问题，周六青岩天气，以及荔波站到小七孔东门接驳。",
+      "family": "组合",
+      "expected_kind": "bundle",
+      "expected_intent": "weather",
+      "expected_tools": [
+        "get_destination_weather",
+        "fixture_transfer"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "place_id": "qingyan",
+        "from_id": "libo-station",
+        "to_id": "xiaoqikong-east-gate"
+      },
+      "negative": false,
+      "negative_reason": null
+    },
+    {
+      "case_id": "bundle-10",
+      "message": "旅行前再问一下，周六青岩天气，以及荔波站到小七孔东门接驳。",
+      "family": "组合",
+      "expected_kind": "bundle",
+      "expected_intent": "weather",
+      "expected_tools": [
+        "get_destination_weather",
+        "fixture_transfer"
+      ],
+      "resolved_parameters": {
+        "date": "2026-11-28",
+        "place_id": "qingyan",
+        "from_id": "libo-station",
+        "to_id": "xiaoqikong-east-gate"
+      },
+      "negative": false,
+      "negative_reason": null
+    }
+  ]
+}

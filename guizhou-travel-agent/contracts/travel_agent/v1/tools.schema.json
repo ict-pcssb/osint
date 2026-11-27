@@ -1,0 +1,797 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "oneOf": [
+    {
+      "type": "object",
+      "required": [
+        "tool",
+        "arguments"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "tool": {
+          "const": "get_destination_weather"
+        },
+        "arguments": {
+          "type": "object",
+          "required": [
+            "place_id",
+            "date"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "place_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120,
+              "pattern": "^[\\w.:-]+$"
+            },
+            "date": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "enum": [
+                    "今天",
+                    "明天",
+                    "周六",
+                    "这周六"
+                  ]
+                }
+              ]
+            },
+            "hourly": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "tool",
+        "arguments"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "tool": {
+          "const": "search_travel_sources"
+        },
+        "arguments": {
+          "type": "object",
+          "required": [
+            "scenic_area",
+            "date"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "scenic_area": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1600
+            },
+            "date": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "enum": [
+                    "今天",
+                    "明天",
+                    "周六",
+                    "这周六"
+                  ]
+                }
+              ]
+            },
+            "place_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120,
+              "pattern": "^[\\w.:-]+$"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "tool",
+        "arguments"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "tool": {
+          "const": "fixture_transfer"
+        },
+        "arguments": {
+          "type": "object",
+          "required": [
+            "from_id",
+            "to_id",
+            "date"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "from_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120,
+              "pattern": "^[\\w.:-]+$"
+            },
+            "to_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120,
+              "pattern": "^[\\w.:-]+$"
+            },
+            "date": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "enum": [
+                    "今天",
+                    "明天",
+                    "周六",
+                    "这周六"
+                  ]
+                }
+              ]
+            },
+            "arrival_at": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1600
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "tool",
+        "arguments"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "tool": {
+          "const": "fixture_cost"
+        },
+        "arguments": {
+          "type": "object",
+          "required": [
+            "place_id",
+            "date",
+            "adults"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "place_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120,
+              "pattern": "^[\\w.:-]+$"
+            },
+            "date": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "enum": [
+                    "今天",
+                    "明天",
+                    "周六",
+                    "这周六"
+                  ]
+                }
+              ]
+            },
+            "adults": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "scenic_area": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1600
+            },
+            "children": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "tool",
+        "arguments"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "tool": {
+          "const": "fixture_candidates"
+        },
+        "arguments": {
+          "type": "object",
+          "required": [
+            "candidate_kind"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "candidate_kind": {
+              "enum": [
+                "hotel",
+                "dining",
+                "taxi",
+                "train",
+                "flight"
+              ]
+            },
+            "date": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "enum": [
+                    "今天",
+                    "明天",
+                    "周六",
+                    "这周六"
+                  ]
+                }
+              ]
+            },
+            "place_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120,
+              "pattern": "^[\\w.:-]+$"
+            },
+            "from_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120,
+              "pattern": "^[\\w.:-]+$"
+            },
+            "to_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120,
+              "pattern": "^[\\w.:-]+$"
+            },
+            "adults": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "children": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "check_in": {
+              "type": "string",
+              "format": "date"
+            },
+            "nights": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "rooms": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "meal_at": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "tool",
+        "arguments"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "tool": {
+          "const": "fixture_itinerary"
+        },
+        "arguments": {
+          "type": "object",
+          "required": [
+            "destination",
+            "start_date",
+            "adults",
+            "days",
+            "group_cap_fen"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "destination": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1600
+            },
+            "start_date": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "enum": [
+                    "今天",
+                    "明天",
+                    "周六",
+                    "这周六"
+                  ]
+                }
+              ]
+            },
+            "adults": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "days": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 30
+            },
+            "group_cap_fen": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "children": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "locked_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 120,
+                "pattern": "^[\\w.:-]+$"
+              },
+              "uniqueItems": true,
+              "maxItems": 50
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "tool",
+        "arguments"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "tool": {
+          "const": "fixture_patch_preview"
+        },
+        "arguments": {
+          "type": "object",
+          "required": [
+            "trip_id",
+            "base_revision",
+            "locked_ids"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "trip_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120,
+              "pattern": "^[\\w.:-]+$"
+            },
+            "base_revision": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "locked_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 120,
+                "pattern": "^[\\w.:-]+$"
+              },
+              "uniqueItems": true,
+              "maxItems": 50
+            },
+            "scope_date": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "tool",
+        "arguments"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "tool": {
+          "const": "fixture_pickup_choices"
+        },
+        "arguments": {
+          "type": "object",
+          "required": [
+            "from_id",
+            "to_id"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "from_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120,
+              "pattern": "^[\\w.:-]+$"
+            },
+            "to_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120,
+              "pattern": "^[\\w.:-]+$"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "tool",
+        "arguments"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "tool": {
+          "const": "fixture_recheck"
+        },
+        "arguments": {
+          "type": "object",
+          "required": [
+            "trip_id",
+            "base_revision"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "trip_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120,
+              "pattern": "^[\\w.:-]+$"
+            },
+            "base_revision": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "tool",
+        "arguments"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "tool": {
+          "const": "fixture_export"
+        },
+        "arguments": {
+          "type": "object",
+          "required": [
+            "trip_id",
+            "base_revision",
+            "format"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "trip_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120,
+              "pattern": "^[\\w.:-]+$"
+            },
+            "base_revision": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "format": {
+              "enum": [
+                "html",
+                "pdf"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "tool",
+        "arguments"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "tool": {
+          "const": "m07_transfer"
+        },
+        "arguments": {
+          "type": "object",
+          "required": [
+            "from_id",
+            "to_id",
+            "date"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "from_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120,
+              "pattern": "^[\\w.:-]+$"
+            },
+            "to_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120,
+              "pattern": "^[\\w.:-]+$"
+            },
+            "date": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "enum": [
+                    "今天",
+                    "明天",
+                    "周六",
+                    "这周六"
+                  ]
+                }
+              ]
+            },
+            "arrival_at": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1600
+            },
+            "mode": {
+              "enum": [
+                "walk",
+                "car",
+                "bus",
+                "shuttle",
+                "rail",
+                "metro"
+              ]
+            },
+            "reservation_cutoff_at": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "tool",
+        "arguments"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "tool": {
+          "const": "m07_intercity"
+        },
+        "arguments": {
+          "type": "object",
+          "required": [
+            "candidate_kind",
+            "from_id",
+            "to_id",
+            "adults",
+            "date"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "candidate_kind": {
+              "enum": [
+                "train",
+                "flight",
+                "intercity"
+              ]
+            },
+            "date": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "enum": [
+                    "今天",
+                    "明天",
+                    "周六",
+                    "这周六"
+                  ]
+                }
+              ]
+            },
+            "from_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120,
+              "pattern": "^[\\w.:-]+$"
+            },
+            "to_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120,
+              "pattern": "^[\\w.:-]+$"
+            },
+            "adults": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "children": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "tool",
+        "arguments"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "tool": {
+          "const": "m08_candidates"
+        },
+        "arguments": {
+          "type": "object",
+          "required": [
+            "candidate_kind"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "candidate_kind": {
+              "enum": [
+                "taxi",
+                "hotel",
+                "dining"
+              ]
+            },
+            "date": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "enum": [
+                    "今天",
+                    "明天",
+                    "周六",
+                    "这周六"
+                  ]
+                }
+              ]
+            },
+            "place_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120,
+              "pattern": "^[\\w.:-]+$"
+            },
+            "from_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120,
+              "pattern": "^[\\w.:-]+$"
+            },
+            "to_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120,
+              "pattern": "^[\\w.:-]+$"
+            },
+            "adults": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "children": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "check_in": {
+              "type": "string",
+              "format": "date"
+            },
+            "nights": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "rooms": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "meal_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "vehicle_class": {
+              "enum": [
+                "经济",
+                "优享",
+                "商务",
+                "豪华",
+                "专车",
+                "特惠",
+                "出租车"
+              ]
+            },
+            "departure_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "next_stop_id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120,
+              "pattern": "^[\\w.:-]+$"
+            },
+            "child_ages": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 17
+              },
+              "maxItems": 8
+            }
+          }
+        }
+      }
+    }
+  ]
+}

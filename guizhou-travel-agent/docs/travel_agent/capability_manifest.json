@@ -1,0 +1,568 @@
+{
+  "schema_version": "1.0",
+  "checked_at": "2026-11-26T14:34:26+08:00",
+  "environment_id": "windows-ict-flight-python-3.13.11",
+  "repository_root": "C:\\Users\\谭友俊\\Desktop\\ict\\guizhou-travel-agent",
+  "source_origin": "用户提供的本地源码快照",
+  "branch": null,
+  "commit": null,
+  "uncommitted_state": "unavailable_without_git",
+  "snapshot_sha256": "5bb8b6a7ff1134d8868cd7ecd703059157d6cb761f85d9798317934766bdd23c",
+  "source_sha256": {
+    "travel_agent.py": "e06bc803adbfd73e48ef8565645fee60ea1b5d9720140997ce665e600da871c9",
+    "travel_search_mcp.py": "eec319ff29b441caab2f5177bc329b5fadbbc2441bf443307443fd44aff13be2",
+    "test_travel_search_mcp.py": "4cc4ea592556d4fcf764a1eca171de361a9b8374d55f6b431c93bde82ab7a167",
+    ".gitignore": "a045f9a39ac6ace51575228f41164568211b3616b2cc5376191653fc8489070e",
+    "提示词/旅游助手系统提示词.md": "a8040710f3c43c723ce39313ecc5b1f892576671046078576177e4551f764f67",
+    "requirements-search.txt": "8ca4db64c53ae5219647f87a59c1f7b3eaca830f8dde1352c1e3b62a42fac1b6",
+    "requirements-flight.txt": "cca77b5f3114be2efe467bd1336f1e17d4347da9179006cbf4044bd0635fdbc5"
+  },
+  "sanitized_config_sha256": "869dcccb856a2499b00bed800725681eb267f6f5db5bd8cc02a0f792edf918ac",
+  "model_id": "qwen4-max",
+  "model_env_names": [
+    "DASHSCOPE_API_KEY",
+    "DASHSCOPE_BASE_URL"
+  ],
+  "env_file_present": true,
+  "dotenv_variable_names": [
+    "AMAP_KEY",
+    "ANYSEARCH_API_KEY",
+    "ROLLINGGO_HOTEL_API_KEY",
+    "VARIFLIGHT_API_KEY"
+  ],
+  "dependency_lock_files": [
+    "requirements-lock-windows-py313.json"
+  ],
+  "dependency_lock_status": "PASS",
+  "dependency_lock_sha256": "11dadc2517ee43f355f40575c88d4eaf1dfbf6bc3f3a01a372576262a7f1c5e5",
+  "locked_package_count": 37,
+  "dependencies": {
+    "requirements-search.txt": [
+      {
+        "dependency": "mcp",
+        "environment": "windows-ict-flight-python-3.13.11",
+        "declaration": "2.2.0",
+        "lock": "2.2.0",
+        "runtime": "2.2.0",
+        "runtime_commit": null,
+        "status": "PASS",
+        "reason": ""
+      },
+      {
+        "dependency": "httpx2",
+        "environment": "windows-ict-flight-python-3.13.11",
+        "declaration": "2.16.2",
+        "lock": "2.16.2",
+        "runtime": "2.16.2",
+        "runtime_commit": null,
+        "status": "PASS",
+        "reason": ""
+      },
+      {
+        "dependency": "pydantic",
+        "environment": "windows-ict-flight-python-3.13.11",
+        "declaration": "2.13.5",
+        "lock": "2.13.5",
+        "runtime": "2.13.5",
+        "runtime_commit": null,
+        "status": "PASS",
+        "reason": ""
+      }
+    ],
+    "requirements-flight.txt": [
+      {
+        "dependency": "flights-mcp",
+        "environment": "windows-ict-flight-python-3.13.11",
+        "declaration": "d96ef277d7473929f629526963e3867c003b6a8f",
+        "lock": "d96ef277d7473929f629526963e3867c003b6a8f",
+        "runtime": "1.1.0",
+        "runtime_commit": "d96ef277d7473929f629526963e3867c003b6a8f",
+        "status": "PASS",
+        "reason": ""
+      },
+      {
+        "dependency": "tzdata",
+        "environment": "windows-ict-flight-python-3.13.11",
+        "declaration": null,
+        "lock": "2026.6",
+        "runtime": "2026.6",
+        "runtime_commit": null,
+        "status": "PASS",
+        "reason": ""
+      }
+    ]
+  },
+  "runtime": {
+    "mcp": {
+      "version": "2.2.0"
+    },
+    "httpx2": {
+      "version": "2.16.2"
+    },
+    "pydantic": {
+      "version": "2.13.5"
+    },
+    "flights-mcp": {
+      "version": "1.1.0",
+      "origin_kind": "local_checkout",
+      "matching_python_files": 10,
+      "commit": "d96ef277d7473929f629526963e3867c003b6a8f"
+    },
+    "tzdata": {
+      "version": "2026.6"
+    }
+  },
+  "interpreter": "C:\\Users\\谭友俊\\Desktop\\ict\\guizhou-travel-agent\\.venv-flight\\Scripts\\python.exe",
+  "mcp_services": {
+    "flights": {
+      "env_names": [],
+      "external_verified": false,
+      "status": "BLOCKED",
+      "transport": "stdio",
+      "hardcoded_absolute_path": true,
+      "command_exists": true,
+      "script_paths_exist": true,
+      "static_ready": true,
+      "reason": "handshake_not_run"
+    },
+    "travel-search": {
+      "env_names": [],
+      "external_verified": false,
+      "status": "BLOCKED",
+      "transport": "stdio",
+      "hardcoded_absolute_path": true,
+      "command_exists": true,
+      "script_paths_exist": true,
+      "static_ready": true,
+      "reason": "handshake_not_run"
+    },
+    "parallel-search": {
+      "env_names": [],
+      "external_verified": false,
+      "status": "BLOCKED",
+      "transport": "http",
+      "endpoint_present": true,
+      "endpoint_has_query": false,
+      "inline_auth_detected": false,
+      "reason": "remote_not_verified"
+    }
+  },
+  "mcp_response_fields": [
+    "content",
+    "is_error",
+    "meta",
+    "result_type",
+    "structured_content"
+  ],
+  "versions": {
+    "prompt_sha256": "a8040710f3c43c723ce39313ecc5b1f892576671046078576177e4551f764f67",
+    "search_adapter_sha256": "eec319ff29b441caab2f5177bc329b5fadbbc2441bf443307443fd44aff13be2",
+    "skill_registry": null,
+    "domain_rules": null,
+    "application_schema": null,
+    "poi_reference_sha256": "59ce44d18260d7b1f2489e2c6d497993abde6e20a739dbda5ef8e0bb08696d61",
+    "m01_contract": "1.0"
+  },
+  "evidence_records": [
+    {
+      "evidence_level": "registration",
+      "scope": "current",
+      "status": "PASS",
+      "source_reference": ".mcp.json + local declarations",
+      "coverage": "进程内静态登记"
+    },
+    {
+      "evidence_level": "handshake",
+      "scope": "historical",
+      "status": "BLOCKED",
+      "source_reference": "开发手册/MCP接口调用手册.md §Parallel",
+      "coverage": "手册记载握手，未附协议原始日志"
+    },
+    {
+      "evidence_level": "business_data",
+      "scope": "historical",
+      "status": "PASS",
+      "source_reference": "测试记录/全量旅行接口复测-2026-11-25.md + 测试记录/Skills测试结果-2026-11-26.json",
+      "coverage": "既有样本的保存观察记录，当前轮无供应商取数"
+    },
+    {
+      "evidence_level": "legacy_project",
+      "scope": "historical",
+      "status": "PASS",
+      "source_reference": "测试记录/Skills测试结果-2026-11-26.json",
+      "coverage": "历史回归与固定回放原有报告"
+    },
+    {
+      "evidence_level": "new_agent",
+      "scope": "historical",
+      "status": "BLOCKED",
+      "source_reference": "测试记录/青岩两轮实测记录.txt",
+      "coverage": "已有 CLI 追问和一次天气工具消息，缺 trace_id、页面和完整验收断言"
+    },
+    {
+      "evidence_level": "new_agent",
+      "scope": "current",
+      "status": "BLOCKED",
+      "coverage": "未取得当前聊天到工具、校验和 UI 的完整链路证据"
+    },
+    {
+      "evidence_level": "target_environment",
+      "scope": "current",
+      "status": "BLOCKED",
+      "coverage": "当前主机仅为本地 M1 测试，目标环境未指定和验收"
+    }
+  ],
+  "evidence_summary": {
+    "historical_record_count": 4,
+    "historical_business_data_recorded": true,
+    "current_new_agent_passes": 0,
+    "new_agent_verified": false,
+    "target_environment": "BLOCKED"
+  },
+  "capabilities": [
+    {
+      "capability_id": "S5",
+      "handler_path": "travel_agent.py:weather / Conversation.ask",
+      "actual_tool_name": "get_destination_weather",
+      "schema_hash": "7e12434e3c5e3a7074ac28c14e056111e8eb5d2bf7302135a848d13aa34754eb",
+      "provider": "Open-Meteo",
+      "evidence_level": "registration",
+      "source_reference": "travel_agent.py:weather / Conversation.ask",
+      "checked_at": "2026-11-26T14:34:26+08:00",
+      "environment_id": "windows-ict-flight-python-3.13.11",
+      "status": "registered_in_agent_source",
+      "owner_module": "M7",
+      "required_parameters": [
+        "day",
+        "place"
+      ],
+      "required_argument_gaps": []
+    },
+    {
+      "capability_id": "S6.search",
+      "handler_path": "travel_search_mcp.py:search_travel_sources",
+      "actual_tool_name": "search_travel_sources",
+      "schema_hash": "6bdf6b8ad1ee8fd2447d867d651394668aa71307a018e6ecb440b0e656a58a9f",
+      "provider": "Exa / AnySearch",
+      "evidence_level": "registration",
+      "source_reference": "travel_search_mcp.py:search_travel_sources",
+      "checked_at": "2026-11-26T14:34:26+08:00",
+      "environment_id": "windows-ict-flight-python-3.13.11",
+      "status": "registered_standalone",
+      "owner_module": "M5",
+      "required_parameters": [
+        "query",
+        "subject"
+      ],
+      "required_argument_gaps": []
+    },
+    {
+      "capability_id": "S3.flights",
+      "handler_path": "flights_mcp/server.py:search_flights",
+      "actual_tool_name": "search_flights",
+      "schema_hash": "a582e00a9e6f679c5602df752e002b79befb85377ef30f892fd019af0a2271ec",
+      "provider": "Google Flights",
+      "evidence_level": "registration",
+      "source_reference": "flights_mcp/server.py:search_flights",
+      "checked_at": "2026-11-26T14:34:26+08:00",
+      "environment_id": "windows-ict-flight-python-3.13.11",
+      "status": "registered_standalone",
+      "owner_module": "M7",
+      "required_parameters": [
+        "destination",
+        "origin"
+      ],
+      "required_argument_gaps": []
+    },
+    {
+      "capability_id": "S3.airports",
+      "handler_path": "flights_mcp/server.py:resolve_airports_tool",
+      "actual_tool_name": "resolve_airports",
+      "schema_hash": "b20f6105542515b31c557ecb8120ef61f44cb447949ec05f7e20cc2673b83ba2",
+      "provider": "flights-mcp airport catalog",
+      "evidence_level": "registration",
+      "source_reference": "flights_mcp/server.py:resolve_airports_tool",
+      "checked_at": "2026-11-26T14:34:26+08:00",
+      "environment_id": "windows-ict-flight-python-3.13.11",
+      "status": "registered_standalone",
+      "owner_module": "M7",
+      "required_parameters": [
+        "query"
+      ],
+      "required_argument_gaps": []
+    },
+    {
+      "capability_id": "S1",
+      "handler_path": null,
+      "actual_tool_name": null,
+      "schema_hash": null,
+      "provider": null,
+      "evidence_level": "legacy_reference",
+      "source_reference": "samples-1124/travel_plan.py:execute; travel_planner_rules.py:arrange",
+      "checked_at": "2026-11-26T14:34:26+08:00",
+      "environment_id": "windows-ict-flight-python-3.13.11",
+      "status": "unbound",
+      "owner_module": "M4",
+      "required_parameters": null,
+      "required_argument_gaps": null
+    },
+    {
+      "capability_id": "S2",
+      "handler_path": null,
+      "actual_tool_name": null,
+      "schema_hash": null,
+      "provider": null,
+      "evidence_level": "legacy_reference",
+      "source_reference": "samples-1124/travel_skill_api.py:plan",
+      "checked_at": "2026-11-26T14:34:26+08:00",
+      "environment_id": "windows-ict-flight-python-3.13.11",
+      "status": "unbound",
+      "owner_module": "M2",
+      "required_parameters": null,
+      "required_argument_gaps": null
+    },
+    {
+      "capability_id": "S3",
+      "handler_path": null,
+      "actual_tool_name": null,
+      "schema_hash": null,
+      "provider": null,
+      "evidence_level": "legacy_reference",
+      "source_reference": "samples-1124/travel_api.py:rail_day; see standalone flights MCP",
+      "checked_at": "2026-11-26T14:34:26+08:00",
+      "environment_id": "windows-ict-flight-python-3.13.11",
+      "status": "unbound",
+      "owner_module": "M7",
+      "required_parameters": null,
+      "required_argument_gaps": null
+    },
+    {
+      "capability_id": "S4",
+      "handler_path": null,
+      "actual_tool_name": null,
+      "schema_hash": null,
+      "provider": null,
+      "evidence_level": "legacy_reference",
+      "source_reference": "samples-1124/travel_plan.py:budget; travel_constraints.py:quote_lines",
+      "checked_at": "2026-11-26T14:34:26+08:00",
+      "environment_id": "windows-ict-flight-python-3.13.11",
+      "status": "unbound",
+      "owner_module": "M6",
+      "required_parameters": null,
+      "required_argument_gaps": null
+    },
+    {
+      "capability_id": "S6",
+      "handler_path": null,
+      "actual_tool_name": null,
+      "schema_hash": null,
+      "provider": null,
+      "evidence_level": "legacy_reference",
+      "source_reference": "samples-1124/travel_plan.py:retrieve; see standalone travel-search MCP",
+      "checked_at": "2026-11-26T14:34:26+08:00",
+      "environment_id": "windows-ict-flight-python-3.13.11",
+      "status": "unbound",
+      "owner_module": "M5",
+      "required_parameters": null,
+      "required_argument_gaps": null
+    },
+    {
+      "capability_id": "S7",
+      "handler_path": null,
+      "actual_tool_name": null,
+      "schema_hash": null,
+      "provider": null,
+      "evidence_level": "legacy_reference",
+      "source_reference": "samples-1124/travel_skill_api.py:weekend; travel_weekend.py:research",
+      "checked_at": "2026-11-26T14:34:26+08:00",
+      "environment_id": "windows-ict-flight-python-3.13.11",
+      "status": "unbound",
+      "owner_module": "M8",
+      "required_parameters": null,
+      "required_argument_gaps": null
+    },
+    {
+      "capability_id": "S8",
+      "handler_path": null,
+      "actual_tool_name": null,
+      "schema_hash": null,
+      "provider": null,
+      "evidence_level": "legacy_reference",
+      "source_reference": "samples-1124/travel_tools.py:route; travel_skill_api.py:osm_tools",
+      "checked_at": "2026-11-26T14:34:26+08:00",
+      "environment_id": "windows-ict-flight-python-3.13.11",
+      "status": "unbound",
+      "owner_module": "M4",
+      "required_parameters": null,
+      "required_argument_gaps": null
+    },
+    {
+      "capability_id": "S9",
+      "handler_path": null,
+      "actual_tool_name": null,
+      "schema_hash": null,
+      "provider": null,
+      "evidence_level": "legacy_reference",
+      "source_reference": "samples-1124/server.py:export_guidebook",
+      "checked_at": "2026-11-26T14:34:26+08:00",
+      "environment_id": "windows-ict-flight-python-3.13.11",
+      "status": "unbound",
+      "owner_module": "M11",
+      "required_parameters": null,
+      "required_argument_gaps": null
+    },
+    {
+      "capability_id": "E1",
+      "handler_path": null,
+      "actual_tool_name": null,
+      "schema_hash": null,
+      "provider": null,
+      "evidence_level": "legacy_reference",
+      "source_reference": "samples-1124/travel_api.py:preview",
+      "checked_at": "2026-11-26T14:34:26+08:00",
+      "environment_id": "windows-ict-flight-python-3.13.11",
+      "status": "unbound",
+      "owner_module": "M3",
+      "required_parameters": null,
+      "required_argument_gaps": null
+    },
+    {
+      "capability_id": "E2",
+      "handler_path": null,
+      "actual_tool_name": null,
+      "schema_hash": null,
+      "provider": null,
+      "evidence_level": "legacy_reference",
+      "source_reference": "samples-1124/旧手册载有选点和报价样例，未见新项目接线",
+      "checked_at": "2026-11-26T14:34:26+08:00",
+      "environment_id": "windows-ict-flight-python-3.13.11",
+      "status": "unbound",
+      "owner_module": "M8",
+      "required_parameters": null,
+      "required_argument_gaps": null
+    },
+    {
+      "capability_id": "E3",
+      "handler_path": null,
+      "actual_tool_name": null,
+      "schema_hash": null,
+      "provider": null,
+      "evidence_level": "legacy_reference",
+      "source_reference": "samples-1124/travel_hotels.py (历史酒店实现)",
+      "checked_at": "2026-11-26T14:34:26+08:00",
+      "environment_id": "windows-ict-flight-python-3.13.11",
+      "status": "unbound",
+      "owner_module": "M8",
+      "required_parameters": null,
+      "required_argument_gaps": null
+    },
+    {
+      "capability_id": "E4",
+      "handler_path": null,
+      "actual_tool_name": null,
+      "schema_hash": null,
+      "provider": null,
+      "evidence_level": "legacy_reference",
+      "source_reference": "samples-1124/travel_skill_api.py:weekend; travel_weekend.py:research",
+      "checked_at": "2026-11-26T14:34:26+08:00",
+      "environment_id": "windows-ict-flight-python-3.13.11",
+      "status": "unbound",
+      "owner_module": "M8",
+      "required_parameters": null,
+      "required_argument_gaps": null
+    },
+    {
+      "capability_id": "E5",
+      "handler_path": null,
+      "actual_tool_name": null,
+      "schema_hash": null,
+      "provider": null,
+      "evidence_level": "legacy_reference",
+      "source_reference": "samples-1124/travel_plan.py:retrieve; notice.lookup 待绑定",
+      "checked_at": "2026-11-26T14:34:26+08:00",
+      "environment_id": "windows-ict-flight-python-3.13.11",
+      "status": "unbound",
+      "owner_module": "M5",
+      "required_parameters": null,
+      "required_argument_gaps": null
+    },
+    {
+      "capability_id": "E6",
+      "handler_path": null,
+      "actual_tool_name": null,
+      "schema_hash": null,
+      "provider": null,
+      "evidence_level": "legacy_reference",
+      "source_reference": "samples-1124/travel_plan.py:budget; ticket.quote 待绑定",
+      "checked_at": "2026-11-26T14:34:26+08:00",
+      "environment_id": "windows-ict-flight-python-3.13.11",
+      "status": "unbound",
+      "owner_module": "M6",
+      "required_parameters": null,
+      "required_argument_gaps": null
+    },
+    {
+      "capability_id": "E7",
+      "handler_path": null,
+      "actual_tool_name": null,
+      "schema_hash": null,
+      "provider": null,
+      "evidence_level": "legacy_reference",
+      "source_reference": "samples-1124/新旧源码均未核得该完整流程",
+      "checked_at": "2026-11-26T14:34:26+08:00",
+      "environment_id": "windows-ict-flight-python-3.13.11",
+      "status": "unbound",
+      "owner_module": "M10",
+      "required_parameters": null,
+      "required_argument_gaps": null
+    },
+    {
+      "capability_id": "S6.parallel",
+      "handler_path": null,
+      "actual_tool_name": null,
+      "schema_hash": null,
+      "provider": "Parallel",
+      "evidence_level": "registration",
+      "source_reference": "开发手册/MCP接口调用手册.md (web_search / web_fetch)",
+      "checked_at": "2026-11-26T14:34:26+08:00",
+      "environment_id": "windows-ict-flight-python-3.13.11",
+      "status": "registered_remote_only",
+      "owner_module": "M5",
+      "required_parameters": null,
+      "required_argument_gaps": null
+    },
+    {
+      "capability_id": "E5.notice",
+      "handler_path": null,
+      "actual_tool_name": null,
+      "schema_hash": null,
+      "provider": null,
+      "evidence_level": "unverified",
+      "source_reference": "开发手册/MCP接口调用手册.md (notice.lookup)",
+      "checked_at": "2026-11-26T14:34:26+08:00",
+      "environment_id": "windows-ict-flight-python-3.13.11",
+      "status": "unbound",
+      "owner_module": "M5",
+      "required_parameters": null,
+      "required_argument_gaps": null
+    },
+    {
+      "capability_id": "E6.ticket",
+      "handler_path": null,
+      "actual_tool_name": null,
+      "schema_hash": null,
+      "provider": null,
+      "evidence_level": "unverified",
+      "source_reference": "开发手册/MCP接口调用手册.md (ticket.quote)",
+      "checked_at": "2026-11-26T14:34:26+08:00",
+      "environment_id": "windows-ict-flight-python-3.13.11",
+      "status": "unbound",
+      "owner_module": "M6",
+      "required_parameters": null,
+      "required_argument_gaps": null
+    }
+  ],
+  "capability_manifest_status": "PASS",
+  "reason": "仅核对本地依赖和登记，目标环境及新 Agent 联通另行验收",
+  "network_attempts": []
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>贵阳两天行程</title>
+<link rel="stylesheet" href="/result.css"><link rel="stylesheet" href="/timeline.css">
+<script src="/result.js" defer></script><script src="/timeline.js" defer></script>
+</head>
+<body><main class="timeline">
+<header><h1>贵阳两天行程</h1><p>固定样例 · 入口、路段和费用均为模拟数据</p></header>
+<div id="columns">
+<form id="plan-form" class="result">
+<h2>首页出行信息</h2>
+<label>开始日期<input id="start" type="date" value="2026-11-28"></label>
+<label>结束日期<input id="end" type="date" value="2026-11-29" required></label>
+<label>全团预算（元）<input id="budget" type="number" min="0" step="0.01" value="800" required></label>
+<p>2 位成人。预算含住宿、餐饮、市内交通和门票。既定返程车票单列。</p>
+<fieldset><legend>第一天游玩时段</legend>
+<label>开始<input id="d1-start" type="time" value="09:30" required></label>
+<label>结束<input id="d1-end" type="time" value="13:00" required></label>
+</fieldset>
+<fieldset><legend>第二天游玩时段</legend>
+<label>开始<input id="d2-start" type="time" value="09:00" required></label>
+<label>结束<input id="d2-end" type="time" value="18:30" required></label>
+</fieldset>
+<label>贵阳北站返程<input id="return" type="time" value="18:30" required></label>
+<label class="check"><input id="confirm-return" type="checkbox">已确认返程时间，不让规划改动</label>
+<button type="submit">生成两日草稿</button>
+</form>
+<div>
+<p id="status" role="status" aria-live="polite"></p>
+<section id="timeline" aria-label="两天时间轴"></section>
+<section id="map-panel" class="result" hidden>
+<h2>出行端点</h2><p>模拟入口位置示意。没有已确认的下一站时不绘制引导路线。</p>
+<canvas width="660" height="240" id="map" aria-label="模拟端点位置图"></canvas>
+<ol id="map-legend" aria-label="端点列表"></ol>
+</section>
+<form id="edit-form" class="result" hidden>
+<h2>编辑未保存草稿</h2>
+<label>站点<select id="edit-stop"></select></label>
+<label>到达<input id="edit-arrive" type="time" required></label>
+<label>离开<input id="edit-leave" type="time" required></label>
+<button type="submit">应用并重新校验</button>
+<button type="button" id="cancel" class="quiet">取消草稿</button>
+</form>
+<div id="save-panel" class="result" hidden>
+<label class="check"><input id="confirm-save" type="checkbox">确认保存当前草稿，待核实事项仍保留</label>
+<button type="button" id="save" disabled>保存行程</button>
+<button type="button" id="retry-save" class="quiet" hidden>重试保存</button>
+<button type="button" id="reopen" class="quiet" hidden>读取已保存行程</button>
+</div>
+</div>
+</div></main></body></html>
+

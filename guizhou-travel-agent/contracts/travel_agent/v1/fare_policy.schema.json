@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "policy_id",
+    "data_mode",
+    "currency",
+    "evidence_ids"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "policy_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120
+    },
+    "data_mode": {
+      "enum": [
+        "fixture",
+        "snapshot",
+        "live"
+      ]
+    },
+    "currency": {
+      "type": "string",
+      "pattern": "^[A-Z]{3}$"
+    },
+    "effective_from": {
+      "type": "string",
+      "format": "date"
+    },
+    "effective_to": {
+      "type": "string",
+      "format": "date"
+    },
+    "adult_fen": {
+      "$ref": "#/$defs/amount"
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "maxItems": 32,
+      "uniqueItems": true
+    },
+    "child_bands": {
+      "type": "array",
+      "maxItems": 30,
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/$defs/height_band"
+          },
+          {
+            "$ref": "#/$defs/age_band"
+          },
+          {
+            "$ref": "#/$defs/fallback"
+          }
+        ]
+      }
+    }
+  },
+  "$defs": {
+    "amount": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "compare": {
+      "enum": [
+        "<",
+        "<=",
+        ">",
+        ">=",
+        "="
+      ]
+    },
+    "height_band": {
+      "type": "object",
+      "required": [
+        "op",
+        "height_mm"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "op": {
+          "$ref": "#/$defs/compare"
+        },
+        "height_mm": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unit_fen": {
+          "$ref": "#/$defs/amount"
+        }
+      }
+    },
+    "age_band": {
+      "type": "object",
+      "required": [
+        "op",
+        "age_years"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "op": {
+          "$ref": "#/$defs/compare"
+        },
+        "age_years": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unit_fen": {
+          "$ref": "#/$defs/amount"
+        }
+      }
+    },
+    "fallback": {
+      "type": "object",
+      "required": [
+        "op"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "op": {
+          "const": "otherwise"
+        },
+        "unit_fen": {
+          "$ref": "#/$defs/amount"
+        }
+      }
+    }
+  }
+}

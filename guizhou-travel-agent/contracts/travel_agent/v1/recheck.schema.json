@@ -1,0 +1,389 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": [
+            "null",
+            "string",
+            "object"
+          ]
+        },
+        "collected_at": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "valid_from": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "valid_to": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "valid_until": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "published_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "origin_id": {
+          "oneOf": [
+            {
+              "type": "string",
+              "maxLength": 120,
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "source_url": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "excerpt": {
+          "type": "string",
+          "maxLength": 1600
+        },
+        "data_mode": {
+          "enum": [
+            "live",
+            "snapshot",
+            "fixture",
+            "cache"
+          ]
+        }
+      },
+      "required": [
+        "value",
+        "collected_at",
+        "valid_from",
+        "valid_to",
+        "valid_until",
+        "published_at",
+        "origin_id",
+        "source_url",
+        "excerpt",
+        "data_mode"
+      ]
+    },
+    "station_change": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "fact_id": {
+          "type": "string",
+          "maxLength": 120,
+          "minLength": 1
+        },
+        "stop_id": {
+          "type": "string",
+          "maxLength": 120,
+          "minLength": 1
+        },
+        "stop_label": {
+          "type": "string",
+          "maxLength": 1600,
+          "minLength": 1
+        },
+        "kind": {
+          "enum": [
+            "opening",
+            "booking",
+            "weather",
+            "last_service",
+            "quote"
+          ]
+        },
+        "target_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "effective_date": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "previous": {
+          "$ref": "#/$defs/observation"
+        },
+        "latest": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/observation"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "checked_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "data_freshness": {
+          "enum": [
+            "current",
+            "stale",
+            "unknown"
+          ]
+        },
+        "status": {
+          "enum": [
+            "unchanged",
+            "changed",
+            "conflict",
+            "pending"
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "maxLength": 120,
+          "minLength": 1
+        },
+        "rule_codes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 120,
+            "minLength": 1
+          },
+          "maxItems": 6
+        }
+      },
+      "required": [
+        "fact_id",
+        "stop_id",
+        "stop_label",
+        "kind",
+        "target_date",
+        "effective_date",
+        "previous",
+        "latest",
+        "checked_at",
+        "data_freshness",
+        "status",
+        "reason",
+        "rule_codes"
+      ]
+    },
+    "report": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "run_id": {
+          "type": "string",
+          "maxLength": 120,
+          "minLength": 1
+        },
+        "trip_id": {
+          "type": "string",
+          "maxLength": 120,
+          "minLength": 1
+        },
+        "base_revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "current_revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "data_mode": {
+          "enum": [
+            "live",
+            "snapshot",
+            "fixture",
+            "cache"
+          ]
+        },
+        "run_status": {
+          "enum": [
+            "partial",
+            "completed"
+          ]
+        },
+        "check_state": {
+          "enum": [
+            "unchanged",
+            "changed",
+            "partial",
+            "unavailable",
+            "running"
+          ]
+        },
+        "checked_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "station_changes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/station_change"
+          },
+          "maxItems": 50
+        },
+        "pending_checks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "fact_id": {
+                "type": "string",
+                "maxLength": 120,
+                "minLength": 1
+              },
+              "stop_id": {
+                "type": "string",
+                "maxLength": 120,
+                "minLength": 1
+              },
+              "reason": {
+                "type": "string",
+                "maxLength": 120,
+                "minLength": 1
+              }
+            },
+            "required": [
+              "fact_id",
+              "stop_id",
+              "reason"
+            ]
+          },
+          "maxItems": 50
+        },
+        "feasibility": {
+          "enum": [
+            "conflict",
+            "needs_verification",
+            "verified"
+          ]
+        },
+        "requires_user_choice": {
+          "type": "boolean"
+        },
+        "suggestion_date": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "declined": {
+          "type": "boolean"
+        },
+        "provider_calls": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 6
+        }
+      },
+      "required": [
+        "run_id",
+        "trip_id",
+        "base_revision",
+        "current_revision",
+        "data_mode",
+        "run_status",
+        "check_state",
+        "checked_at",
+        "station_changes",
+        "pending_checks",
+        "feasibility",
+        "requires_user_choice",
+        "suggestion_date",
+        "declined",
+        "provider_calls"
+      ]
+    },
+    "start": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "base_revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "trigger": {
+          "enum": [
+            "open",
+            "manual",
+            "chat"
+          ]
+        }
+      },
+      "required": [
+        "base_revision",
+        "trigger"
+      ]
+    }
+  }
+}

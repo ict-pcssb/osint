@@ -1,0 +1,397 @@
+{
+  "type": "object",
+  "required": [
+    "claim",
+    "evidence",
+    "summary_candidates",
+    "official_links",
+    "stages",
+    "tool_calls",
+    "write_count"
+  ],
+  "properties": {
+    "claim": {
+      "type": "object",
+      "required": [
+        "claim_id",
+        "subject_id",
+        "target_date",
+        "line_direction",
+        "claim_type",
+        "status",
+        "checked_at",
+        "uncertainties",
+        "evidence_ids",
+        "independent_source_count",
+        "simulation_status",
+        "confidence_basis",
+        "value"
+      ],
+      "properties": {
+        "claim_id": {
+          "type": "string"
+        },
+        "subject_id": {
+          "type": "string"
+        },
+        "target_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "line_direction": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "claim_type": {
+          "enum": [
+            "opening",
+            "booking",
+            "ticket_price",
+            "last_service"
+          ]
+        },
+        "status": {
+          "enum": [
+            "confirmed",
+            "contradicted",
+            "unconfirmed",
+            "conflicted"
+          ]
+        },
+        "checked_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "uncertainties": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "independent_source_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "simulation_status": {
+          "oneOf": [
+            {
+              "enum": [
+                "confirmed",
+                "contradicted",
+                "unconfirmed",
+                "conflicted"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "confidence_basis": {
+          "enum": [
+            "official_original",
+            "unconfirmed"
+          ]
+        },
+        "value": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "required": [
+                "amount_fen",
+                "currency"
+              ],
+              "properties": {
+                "amount_fen": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "currency": {
+                  "const": "CNY"
+                }
+              },
+              "additionalProperties": false
+            }
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "evidence_id",
+          "source_url",
+          "publisher",
+          "source_group_id",
+          "retrieved_at",
+          "published_at",
+          "effective_from",
+          "effective_to",
+          "source_kind",
+          "data_mode",
+          "content_hash",
+          "excerpt",
+          "provider",
+          "freshness",
+          "expires_at"
+        ],
+        "properties": {
+          "evidence_id": {
+            "type": "string"
+          },
+          "source_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "publisher": {
+            "type": "string"
+          },
+          "source_group_id": {
+            "type": "string"
+          },
+          "retrieved_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "published_at": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "effective_from": {
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "effective_to": {
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "source_kind": {
+            "type": "string"
+          },
+          "data_mode": {
+            "enum": [
+              "live",
+              "fixture",
+              "snapshot"
+            ]
+          },
+          "content_hash": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "excerpt": {
+            "type": "string"
+          },
+          "provider": {
+            "type": "string"
+          },
+          "freshness": {
+            "enum": [
+              "current",
+              "expired"
+            ]
+          },
+          "expires_at": {
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "summary_candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "kind",
+          "url",
+          "title",
+          "provider"
+        ],
+        "properties": {
+          "kind": {
+            "const": "summary_candidate"
+          },
+          "url": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "title": {
+            "type": "string"
+          },
+          "provider": {
+            "type": "string"
+          },
+          "published_at": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "excerpt": {
+            "type": "string"
+          },
+          "data_mode": {
+            "enum": [
+              "live",
+              "snapshot",
+              "fixture"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "official_links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "kind",
+          "url"
+        ],
+        "properties": {
+          "kind": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "stages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "stage",
+          "tool",
+          "status"
+        ],
+        "properties": {
+          "stage": {
+            "enum": [
+              "registry",
+              "discover",
+              "read",
+              "extract",
+              "applicability"
+            ]
+          },
+          "tool": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "unbound",
+              "success",
+              "empty",
+              "timeout",
+              "auth_failed",
+              "rate_limited",
+              "quota_exhausted",
+              "invalid_response",
+              "provider_error"
+            ]
+          },
+          "provider": {
+            "type": "string"
+          },
+          "attempted": {
+            "type": "boolean"
+          },
+          "reason": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "evidence_id": {
+            "type": "string"
+          },
+          "applicable": {
+            "type": "boolean"
+          },
+          "confidence_basis": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "tool_calls": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "write_count": {
+      "const": 0
+    }
+  },
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

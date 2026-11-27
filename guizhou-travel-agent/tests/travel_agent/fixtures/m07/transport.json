@@ -1,0 +1,219 @@
+{
+  "data_mode": "fixture",
+  "clock": "2026-11-26T10:00:00+08:00",
+  "weather": {
+    "timezone": "Asia/Shanghai",
+    "daily": {
+      "time": [
+        "2026-11-27"
+      ],
+      "temperature_2m_min": [
+        8.1
+      ],
+      "temperature_2m_max": [
+        16.3
+      ],
+      "precipitation_probability_max": [
+        70
+      ]
+    },
+    "daily_units": {
+      "temperature_2m_min": "°C",
+      "temperature_2m_max": "°C",
+      "precipitation_probability_max": "%"
+    }
+  },
+  "route": {
+    "profile": "car",
+    "distance_m": 28000,
+    "duration_s": 2400
+  },
+  "schedule": {
+    "boarding_at": "2026-11-29T00:20:00+08:00",
+    "exit_min": 10,
+    "boarding_buffer_min": 15,
+    "ride_min": 60,
+    "transfer_min": 0,
+    "walk_min": 0,
+    "boarding_id": "tongren",
+    "alighting_id": "fanjing-east"
+  },
+  "booking": {
+    "cutoff_at": "2026-11-29T00:50:00+08:00",
+    "buffer_min": 0,
+    "buffer_source": "user_confirmed",
+    "entrance_id": "fanjing-east",
+    "cutoff_confirmed": true
+  },
+  "codes": {
+    "贵阳北": {
+      "station_code": "KQW"
+    },
+    "遵义": {
+      "station_code": "ZYE"
+    }
+  },
+  "trains": [
+    {
+      "start_train_code": "G602",
+      "from_station": "贵阳北",
+      "to_station": "遵义",
+      "start_date": "2026-11-28",
+      "arrive_date": "2026-11-29",
+      "start_time": "23:40",
+      "arrive_time": "00:20",
+      "prices": [
+        {
+          "seat_name": "二等座",
+          "num": null,
+          "price": null
+        }
+      ]
+    },
+    {
+      "start_train_code": "G604",
+      "from_station": "贵阳北",
+      "to_station": "遵义",
+      "start_date": "2026-11-28",
+      "arrive_date": "2026-11-28",
+      "start_time": "17:00",
+      "arrive_time": "17:50",
+      "prices": [
+        {
+          "seat_name": "二等座",
+          "num": "有",
+          "price": 49.5
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "qingyan",
+      "kind": "poi",
+      "label": "青岩古镇",
+      "aliases": [
+        "青岩"
+      ],
+      "coordinates": {
+        "latitude": 26.3308,
+        "longitude": 106.6822,
+        "system": "WGS84",
+        "source_url": "https://www.openstreetmap.org/"
+      },
+      "weather_area": "花溪区预报"
+    },
+    {
+      "id": "tongren",
+      "kind": "station",
+      "label": "铜仁站",
+      "aliases": [
+        "铜仁"
+      ],
+      "coordinates": {
+        "latitude": 27.74332,
+        "longitude": 109.1997,
+        "system": "WGS84",
+        "source_url": "https://www.openstreetmap.org/"
+      }
+    },
+    {
+      "id": "tongren-south",
+      "kind": "station",
+      "label": "铜仁南站",
+      "aliases": [
+        "铜仁"
+      ],
+      "coordinates": {
+        "latitude": 27.28245,
+        "longitude": 108.97131,
+        "system": "WGS84",
+        "source_url": "https://www.openstreetmap.org/"
+      }
+    },
+    {
+      "id": "guiyang-north",
+      "kind": "station",
+      "label": "贵阳北站",
+      "aliases": [
+        "贵阳北"
+      ]
+    },
+    {
+      "id": "zunyi",
+      "kind": "station",
+      "label": "遵义站",
+      "aliases": [
+        "遵义"
+      ]
+    },
+    {
+      "id": "fanjingshan",
+      "kind": "poi",
+      "label": "梵净山"
+    },
+    {
+      "id": "fanjing-east",
+      "kind": "entrance",
+      "label": "梵净山东门",
+      "aliases": [
+        "梵净山"
+      ],
+      "parent_id": "fanjingshan",
+      "coordinates": {
+        "latitude": 27.9,
+        "longitude": 108.7,
+        "system": "WGS84",
+        "source_url": "https://www.openstreetmap.org/"
+      }
+    },
+    {
+      "id": "fanjing-west",
+      "kind": "entrance",
+      "label": "梵净山西门",
+      "aliases": [
+        "梵净山"
+      ],
+      "parent_id": "fanjingshan",
+      "coordinates": {
+        "latitude": 27.91,
+        "longitude": 108.71000000000001,
+        "system": "WGS84",
+        "source_url": "https://www.openstreetmap.org/"
+      }
+    },
+    {
+      "id": "fanjing-parking",
+      "kind": "entrance",
+      "label": "梵净山停车场",
+      "aliases": [
+        "梵净山"
+      ],
+      "parent_id": "fanjingshan",
+      "coordinates": {
+        "latitude": 27.919999999999998,
+        "longitude": 108.72,
+        "system": "WGS84",
+        "source_url": "https://www.openstreetmap.org/"
+      }
+    },
+    {
+      "id": "pvg",
+      "kind": "airport",
+      "label": "上海浦东机场",
+      "aliases": [
+        "PVG",
+        "浦东"
+      ]
+    },
+    {
+      "id": "kwe",
+      "kind": "airport",
+      "label": "贵阳龙洞堡机场",
+      "aliases": [
+        "KWE",
+        "龙洞堡"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>复查我的贵阳行程</title><link rel="stylesheet" href="/result.css"><link rel="stylesheet" href="/recheck.css">
+<script defer src="/result.js"></script><script defer src="/patch.js"></script><script defer src="/recheck.js"></script>
+</head><body><main class="chat">
+<header><h1>复查我的贵阳行程</h1><p>本机演示，开放状态、车次和线路使用固定测试数据。</p></header>
+<div class="patch-actions"><button id="reload-trip">重新打开行程</button><button id="recheck-manual">立即复查</button></div>
+<p id="recheck-status" role="status"></p>
+<section id="traveller-timeline" aria-label="已保存的行程"></section>
+<section id="recheck-results" aria-label="复查结果"></section>
+<form id="patch-form" hidden><button type="submit" disabled>看修改预览</button></form>
+<p id="patch-status" role="status"></p><section id="patch-preview" aria-live="polite"></section>
+</main></body></html>

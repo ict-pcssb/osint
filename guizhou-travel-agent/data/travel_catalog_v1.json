@@ -1,0 +1,309 @@
+{
+  "schema_version": "1.0",
+  "entities": [
+    {
+      "id": "jiaxiulou",
+      "kind": "poi",
+      "label": "甲秀楼",
+      "aliases": [
+        "甲秀楼景区"
+      ],
+      "authority_hosts": [
+        "english.guiyang.gov.cn",
+        "www.guiyang.gov.cn",
+        "www.kaiyang.gov.cn"
+      ],
+      "links": [
+        {
+          "kind": "information",
+          "url": "https://english.guiyang.gov.cn/2019-04/17/c_355976.htm"
+        },
+        {
+          "kind": "information",
+          "url": "https://www.kaiyang.gov.cn/zmhd/rdhy/202508/t20250806_88405688.html"
+        }
+      ]
+    },
+    {
+      "id": "fuyu-north-foot",
+      "kind": "entrance",
+      "label": "浮玉桥北端步行口",
+      "aliases": [
+        "甲秀楼",
+        "甲秀广场侧"
+      ],
+      "parent_id": "jiaxiulou",
+      "coordinates": {
+        "latitude": 26.5754098,
+        "longitude": 106.7156904,
+        "system": "WGS84",
+        "source_url": "https://www.openstreetmap.org/node/7805809929"
+      }
+    },
+    {
+      "id": "jiaxiu-entry",
+      "kind": "entrance",
+      "label": "浮玉桥南端步行口",
+      "aliases": [
+        "甲秀楼",
+        "翠微园侧"
+      ],
+      "parent_id": "jiaxiulou",
+      "coordinates": {
+        "latitude": 26.5747214,
+        "longitude": 106.7161334,
+        "system": "WGS84",
+        "source_url": "https://www.openstreetmap.org/node/7805809930"
+      }
+    },
+    {
+      "id": "tongren",
+      "kind": "station",
+      "label": "铜仁站",
+      "aliases": [
+        "铜仁"
+      ],
+      "coordinates": {
+        "latitude": 27.74332,
+        "longitude": 109.1997,
+        "system": "WGS84",
+        "source_url": "https://www.openstreetmap.org/node/1681825151"
+      }
+    },
+    {
+      "id": "tongren-south",
+      "kind": "station",
+      "label": "铜仁南站",
+      "aliases": [
+        "铜仁"
+      ],
+      "coordinates": {
+        "latitude": 27.28245,
+        "longitude": 108.97131,
+        "system": "WGS84",
+        "source_url": "https://www.openstreetmap.org/node/2953807111"
+      }
+    },
+    {
+      "id": "guiyang-metro-l1",
+      "kind": "line_direction",
+      "label": "贵阳地铁1号线",
+      "aliases": [
+        "轨道交通1号线"
+      ],
+      "authority_hosts": [
+        "english.guiyang.gov.cn"
+      ],
+      "directions": {
+        "towards-xiaomeng": "窦官往小孟工业园",
+        "towards-douguan": "小孟工业园往窦官"
+      },
+      "links": [
+        {
+          "kind": "information",
+          "url": "https://english.guiyang.gov.cn/2026-07/01/c_1056570.htm"
+        }
+      ]
+    },
+    {
+      "id": "huangguoshu",
+      "kind": "poi",
+      "label": "黄果树风景名胜区",
+      "aliases": [
+        "黄果树"
+      ],
+      "authority_hosts": [
+        "fgw.guizhou.gov.cn"
+      ],
+      "links": [
+        {
+          "kind": "information",
+          "url": "https://fgw.guizhou.gov.cn/zwgk/zdlyxx/jffw/jyfwxsfml/202601/P020260205668047355774.pdf"
+        }
+      ]
+    },
+    {
+      "id": "fanjingshan",
+      "kind": "poi",
+      "label": "梵净山",
+      "aliases": [
+        "梵净山旅游区",
+        "梵净山生态旅游区"
+      ],
+      "authority_hosts": [
+        "fanjingshan.gz.cn"
+      ],
+      "links": [
+        {
+          "kind": "information",
+          "url": "https://fanjingshan.gz.cn/"
+        },
+        {
+          "kind": "booking",
+          "url": "https://fanjingshan.gz.cn/?page_id=1188"
+        },
+        {
+          "kind": "information",
+          "url": "https://fanjingshan.gz.cn/?p=11554"
+        }
+      ]
+    },
+    {
+      "id": "qingyan",
+      "kind": "poi",
+      "label": "青岩古镇",
+      "aliases": [
+        "青岩"
+      ],
+      "weather_area": "花溪区预报",
+      "coordinates": {
+        "latitude": 26.3308,
+        "longitude": 106.6822,
+        "system": "WGS84",
+        "source_url": "https://www.openstreetmap.org/"
+      }
+    },
+    {
+      "id": "fanjing-east",
+      "kind": "entrance",
+      "label": "梵净山东门",
+      "aliases": [
+        "梵净山"
+      ],
+      "parent_id": "fanjingshan",
+      "coordinates": {
+        "longitude": 108.7704414,
+        "latitude": 27.8469486,
+        "system": "WGS84",
+        "precision": "mapped_entrance",
+        "source_url": "https://www.openstreetmap.org/node/7491137369"
+      }
+    },
+    {
+      "id": "fanjing-west",
+      "kind": "entrance",
+      "label": "梵净山西门",
+      "aliases": [
+        "梵净山"
+      ],
+      "parent_id": "fanjingshan",
+      "coordinates": {
+        "longitude": 108.638822,
+        "latitude": 27.915383,
+        "system": "WGS84",
+        "precision": "mapped_entrance",
+        "source_url": "https://www.openstreetmap.org/node/3884471199"
+      }
+    },
+    {
+      "id": "fanjing-parking",
+      "kind": "parking",
+      "label": "梵净山停车场",
+      "parent_id": "fanjingshan"
+    },
+    {
+      "id": "guiyang-north",
+      "kind": "station",
+      "label": "贵阳北站",
+      "aliases": [
+        "贵阳北"
+      ]
+    },
+    {
+      "id": "zunyi",
+      "kind": "station",
+      "label": "遵义站",
+      "aliases": [
+        "遵义"
+      ]
+    },
+    {
+      "id": "shanghai-hongqiao",
+      "kind": "station",
+      "label": "上海虹桥站",
+      "aliases": [
+        "上海虹桥"
+      ]
+    },
+    {
+      "id": "pvg",
+      "kind": "airport",
+      "label": "上海浦东机场",
+      "aliases": [
+        "PVG",
+        "浦东机场",
+        "浦东"
+      ]
+    },
+    {
+      "id": "sha",
+      "kind": "airport",
+      "label": "上海虹桥机场",
+      "aliases": [
+        "SHA",
+        "虹桥机场"
+      ]
+    },
+    {
+      "id": "kwe",
+      "kind": "airport",
+      "label": "贵阳龙洞堡机场",
+      "aliases": [
+        "KWE",
+        "龙洞堡机场",
+        "龙洞堡"
+      ]
+    },
+    {
+      "id": "guiyang",
+      "kind": "city",
+      "label": "贵阳",
+      "station_id": "guiyang-north",
+      "airport_id": "kwe"
+    },
+    {
+      "id": "zunyi-city",
+      "kind": "city",
+      "label": "遵义市",
+      "aliases": [
+        "遵义"
+      ],
+      "station_id": "zunyi"
+    },
+    {
+      "id": "shanghai",
+      "kind": "city",
+      "label": "上海",
+      "station_id": "shanghai-hongqiao",
+      "airport_id": "pvg"
+    },
+    {
+      "id": "libo-station",
+      "kind": "station",
+      "label": "荔波站",
+      "aliases": [
+        "荔波高铁站"
+      ]
+    },
+    {
+      "id": "xiaoqikong",
+      "kind": "poi",
+      "label": "小七孔景区",
+      "aliases": [
+        "小七孔",
+        "荔波小七孔",
+        "荔波小七孔景区"
+      ]
+    },
+    {
+      "id": "xiaoqikong-east-gate",
+      "kind": "entrance",
+      "label": "小七孔东门",
+      "aliases": [
+        "小七孔景区东门",
+        "荔波小七孔东门"
+      ],
+      "parent_id": "xiaoqikong"
+    }
+  ]
+}

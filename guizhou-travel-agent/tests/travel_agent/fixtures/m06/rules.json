@@ -1,0 +1,53 @@
+{
+  "data_mode": "fixture",
+  "checked_at": "2026-11-26T10:00:00+08:00",
+  "date": "2026-11-28",
+  "entities": [
+    "tongren",
+    "tongren-south",
+    "fanjing-east",
+    "fanjing-west",
+    "fanjing-parking"
+  ],
+  "fare_policy": {
+    "policy_id": "fixture-family",
+    "data_mode": "fixture",
+    "currency": "CNY",
+    "adult_fen": 10000,
+    "child_bands": [
+      {
+        "op": "<",
+        "height_mm": 1200,
+        "unit_fen": 0
+      },
+      {
+        "op": "<",
+        "height_mm": 1500,
+        "unit_fen": 5000
+      },
+      {
+        "op": "otherwise",
+        "unit_fen": 10000
+      }
+    ],
+    "evidence_ids": [
+      "fixture-fare"
+    ]
+  },
+  "shuttle_fen": 3000,
+  "segments": {
+    "exit": 15,
+    "wait": 20,
+    "ride": 40,
+    "transfer": 10,
+    "walk": 10
+  },
+  "locked": {
+    "stable_id": "return_1",
+    "lock_revision": 1,
+    "kind": "rail",
+    "fields": {
+      "departure_at": "2026-11-29T18:00:00+08:00"
+    }
+  }
+}

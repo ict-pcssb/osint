@@ -1,0 +1,8 @@
+{
+  "scope": "M12 Windows registration and optional known adapters",
+  "permissions": "read_only",
+  "required": ["open-meteo", "osm-transfer", "12306", "amap-taxi", "rollinggo-hotel", "osm-dining", "exa-anysearch-source-chain"],
+  "separate_optional_probe": ["fli"],
+  "off_by_default": ["flights-primary", "authenticated-notice", "kb", "parallel-default-routing"],
+  "commands_must_return_business_fields": true
+}

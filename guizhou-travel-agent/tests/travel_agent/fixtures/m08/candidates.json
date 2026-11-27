@@ -1,0 +1,104 @@
+{
+  "data_mode": "fixture",
+  "clock": "2026-11-26T10:00:00+08:00",
+  "point": {
+    "entities": [
+      {
+        "cardScene": "amap_car_point",
+        "cardSubScene": "start_point",
+        "businessData": " {\"test-only\":\"Ａ\\nB\",\"keep\":\"  \"}  ",
+        "modelInput": {
+          "headerTitle": "请选择上车点",
+          "points": [
+            {
+              "name": "贵阳北站西广场候车区",
+              "pointId": "p1"
+            },
+            {
+              "name": "贵阳北站东广场候车区",
+              "pointId": "p2"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "quote": {
+    "entities": [
+      {
+        "cardScene": "amap_car_plan",
+        "modelInput": {
+          "startPoint": {
+            "name": "贵阳北站东广场候车区"
+          },
+          "endPoint": {
+            "name": "青岩古镇北门停车场"
+          },
+          "transportTypeInfoList": [
+            {
+              "transportTypeName": "经济",
+              "minPrice": 80,
+              "maxPrice": 110
+            },
+            {
+              "transportTypeName": "商务",
+              "minPrice": 150,
+              "maxPrice": 200
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "hotels": {
+    "success": true,
+    "hotelInformationList": [
+      {
+        "hotelId": 101,
+        "name": "样例酒店甲",
+        "price": {
+          "hasPrice": true,
+          "lowestPrice": 260,
+          "currency": "CNY"
+        }
+      },
+      {
+        "hotelId": 102,
+        "name": "样例酒店乙",
+        "price": {
+          "hasPrice": false
+        }
+      }
+    ]
+  },
+  "rate": {
+    "success": true,
+    "roomRatePlans": [
+      {
+        "roomName": "样例大床房",
+        "averagePrice": 260,
+        "currency": "CNY",
+        "isOnRequest": true
+      }
+    ]
+  },
+  "foods": {
+    "results": [
+      {
+        "id": "node/101",
+        "name": "甲餐馆",
+        "lat": 26.331,
+        "lon": 106.6823,
+        "address": "样例东路1号",
+        "opening_hours": "Mo-Su 08:00-20:00"
+      },
+      {
+        "id": "node/102",
+        "name": "乙餐馆",
+        "lat": 26.335,
+        "lon": 106.6823,
+        "address": "样例东路2号"
+      }
+    ]
+  }
+}

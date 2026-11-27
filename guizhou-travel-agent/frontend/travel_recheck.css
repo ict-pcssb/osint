@@ -1,0 +1,6 @@
+#recheck-results { display: grid; gap: 10px; }
+#recheck-results article { border-left: 4px solid #428371; }
+#recheck-results article.conflict { border-left-color: #a75038; }
+#recheck-results article.pending { border-left-color: #976a2f; }
+#recheck-results dl { overflow-wrap: anywhere; }
+#patch-form[hidden] { display: none; }

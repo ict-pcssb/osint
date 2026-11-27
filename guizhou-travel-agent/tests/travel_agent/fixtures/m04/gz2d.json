@@ -1,0 +1,158 @@
+{
+  "form": {
+    "destination": "贵阳",
+    "start_date": "2026-11-28",
+    "end_date": "2026-11-29",
+    "adults": 2,
+    "days": 2,
+    "budget_scope": "group",
+    "budget_fen": 80000,
+    "day_starts": [
+      {
+        "entrance_id": "hotel-demo-entry",
+        "start": "09:30",
+        "end": "13:00"
+      },
+      {
+        "entrance_id": "hotel-demo-entry",
+        "start": "09:00",
+        "end": "18:30"
+      }
+    ],
+    "return": {
+      "entrance_id": "guiyang-north-entry",
+      "departure_at": "2026-11-29T18:30:00+08:00",
+      "confirmed": true
+    }
+  },
+  "catalog": [
+    {
+      "id": "hotel-demo-entry",
+      "poi_id": "hotel-demo",
+      "label": "住宿起点（模拟）",
+      "latitude": 26.5781,
+      "longitude": 106.711
+    },
+    {
+      "id": "jiaxiu-entry",
+      "poi_id": "jiaxiulou",
+      "label": "甲秀楼入口（模拟）",
+      "latitude": 26.5698,
+      "longitude": 106.7162
+    },
+    {
+      "id": "wenchang-entry",
+      "poi_id": "wenchang",
+      "label": "文昌阁入口（模拟）",
+      "latitude": 26.583,
+      "longitude": 106.72
+    },
+    {
+      "id": "museum-entry",
+      "poi_id": "guizhou-museum",
+      "label": "贵州省博物馆入口（模拟）",
+      "latitude": 26.6448,
+      "longitude": 106.6404
+    },
+    {
+      "id": "park-entry",
+      "poi_id": "guanshanhu",
+      "label": "观山湖公园入口（模拟）",
+      "latitude": 26.628,
+      "longitude": 106.638
+    },
+    {
+      "id": "guiyang-north-entry",
+      "poi_id": "guiyang-north",
+      "label": "贵阳北站进站口（模拟）",
+      "latitude": 26.623,
+      "longitude": 106.677
+    }
+  ],
+  "legs": {
+    "hotel-demo-entry/jiaxiu-entry": {
+      "profile": "foot",
+      "distance_m": 1100,
+      "duration_s": 1200
+    },
+    "jiaxiu-entry/wenchang-entry": {
+      "profile": "foot",
+      "distance_m": 1800,
+      "duration_s": 1500
+    },
+    "hotel-demo-entry/museum-entry": {
+      "profile": "car",
+      "distance_m": 10500,
+      "duration_s": 1800
+    },
+    "museum-entry/park-entry": {
+      "profile": "car",
+      "distance_m": 3000,
+      "duration_s": 900
+    },
+    "park-entry/guiyang-north-entry": {
+      "profile": "car",
+      "distance_m": 5600,
+      "duration_s": 1200
+    }
+  },
+  "costs": [
+    {
+      "item_id": "lodging",
+      "category": "hotel",
+      "unit": "room_night",
+      "quantity": 1,
+      "unit_fen": 28000,
+      "reference_fen": 28000
+    },
+    {
+      "item_id": "meals",
+      "category": "meal",
+      "unit": "group",
+      "quantity": 1,
+      "unit_fen": 22000
+    },
+    {
+      "item_id": "d1-ride",
+      "category": "transport",
+      "unit": "group",
+      "quantity": 1,
+      "unit_fen": 6000
+    },
+    {
+      "item_id": "d2-ride",
+      "category": "transport",
+      "unit": "group",
+      "quantity": 1,
+      "unit_fen": 6000
+    },
+    {
+      "item_id": "d1-jiaxiu-ticket",
+      "category": "ticket",
+      "unit": "person",
+      "quantity": 2,
+      "unit_fen": 750
+    },
+    {
+      "item_id": "d1-wenchang-ticket",
+      "category": "ticket",
+      "unit": "person",
+      "quantity": 2,
+      "unit_fen": 750
+    },
+    {
+      "item_id": "d2-museum-ticket",
+      "category": "ticket",
+      "unit": "person",
+      "quantity": 2,
+      "unit_fen": 750
+    },
+    {
+      "item_id": "d2-park-ticket",
+      "category": "ticket",
+      "unit": "person",
+      "quantity": 2,
+      "unit_fen": 750
+    }
+  ]
+}
